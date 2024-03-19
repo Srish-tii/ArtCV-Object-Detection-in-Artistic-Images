@@ -17,3 +17,4 @@ StyleCOCO is generated from two image sets. `COCO 2017` contains the content ima
 
 
 **Create StyleCOCO**: From the root project folder, `cd models/stylize` and run `nohup python3 stylize.py --content-dir '../../data/content_dir/' --style-dir '../../data/style_dir/' --output-dir '../../output/styled_images' --num-styles 1 --alpha 1 --content-size 0 --style-size 0 --crop 0 &`
+
