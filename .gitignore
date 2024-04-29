@@ -1,3 +1,22 @@
-*.jpg
-*.pth
+# Ignore image files
+data/content_dir/train/*.jpg
+data/content_dir/val/*.jpg
+data/style_dir/train/*.jpg
+output/styled_images/ArtFlow-AdaIn/train/*.jpg
+output/styled_images/ArtFlow-AdaIn/val/*.jpg
+output/styled_images/ArtFlow-WCT/train/*.jpg
+output/styled_images/ArtFlow-WCT/val/*.jpg
+output/styled_images/SANet/train/*.jpg
+output/styled_images/SANet/val/*.jpg
+
+# Ignore JSON
+data/annotations/*.json
+
+# Ignore model weights
+models/stylize/ArtFlow/experiments/ArtFlow-AdaIN/*.pth
+models/stylize/ArtFlow/experiments/ArtFlow-WCT/*.pth
+models/stylize/ArtFlow/experiments/ArtFlow-AdaIN-Portrait/*.pth
+models/stylize/SANet/*.pth
+
+# Ignore log files
 *.out
