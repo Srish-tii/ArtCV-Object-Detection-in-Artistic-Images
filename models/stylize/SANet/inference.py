@@ -252,8 +252,8 @@ class Net(nn.Module):
             return g_t
 
 if __name__ == "__main__":
-    #np.random.seed(4832) # Seed for training set
-    np.random.seed(3922) # Seed for validation set
+    np.random.seed(4832) # Seed for training set
+    #np.random.seed(3922) # Seed for validation set
     parser = argparse.ArgumentParser()
     # Basic options
     parser.add_argument('--content_dir', type=str, default=None,
@@ -285,7 +285,7 @@ if __name__ == "__main__":
     parser.add_argument('--start_iter', type=float, default=0)
     args = parser.parse_args()
 
-    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:7' if torch.cuda.is_available() else 'cpu')
 
     #from torchsummary import summary
     #print(summary(vgg.to(device), (3, 228, 228)))
@@ -307,7 +307,7 @@ if __name__ == "__main__":
     content_paths = sorted([f for f in content_dir.glob('*.jpg')])
     style_dir = Path(args.style_dir)
     style_paths = [f for f in style_dir.glob('*.jpg')]
-    finished_content_paths = glob.glob('../../../output/styled_images/SANet/val/*.jpg')
+    finished_content_paths = glob.glob('../../../output/styled_images/examples/SANet/*.jpg')
     finished_content_ids = [int(re.findall(r'[0-9]+', f)[0]) for f in finished_content_paths]
     content_path_id = [int(re.findall(r'[0-9]+', str(content_path))[0]) for content_path in content_paths]
     unchecked_ids = set(content_path_id).difference(set(finished_content_ids))

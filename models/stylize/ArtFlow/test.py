@@ -77,7 +77,7 @@ if __name__=="__main__":
 
     args = parser.parse_args()
 
-    device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda:7" if torch.cuda.is_available() else "cpu")
 
     if args.operator == 'wct':
         from glow_wct import Glow
@@ -99,7 +99,7 @@ if __name__=="__main__":
     style_dir = Path(args.style_dir)
     style_paths = [f for f in style_dir.glob('*.jpg')]
 
-    finished_content_paths = glob.glob('../../../output/styled_images/ArtFlow-WCT/val/*.jpg')
+    finished_content_paths = glob.glob('../../../output/styled_images/examples/ArtFlow-WCT/*.jpg')
     finished_content_ids = [int(re.findall(r'[0-9]+', f)[0]) for f in finished_content_paths]
 
 
@@ -122,8 +122,8 @@ if __name__=="__main__":
 
     glow.eval()
     # -----------------------start------------------------
-    #np.random.seed(4832) # Seed for training set
-    np.random.seed(3922) # Seed for validation set
+    np.random.seed(4832) # Seed for training set
+    #np.random.seed(3922) # Seed for validation set
     for content_path in content_paths:
         content_path_id = int(re.findall(r'[0-9]+', str(content_path))[0])
         if content_path_id in unchecked_ids:
