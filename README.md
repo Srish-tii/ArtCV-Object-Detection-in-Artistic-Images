@@ -1,7 +1,5 @@
 # ArtCV-Object-Detection-in-Artistic-Images
 
-testing
-
 ## Steps to build StyleCOCO
 
 StyleCOCO is generated from two image sets. `COCO 2017` contains the content images and `Painter By Numbers` contains the style images.
