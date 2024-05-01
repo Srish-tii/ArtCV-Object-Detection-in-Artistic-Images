@@ -17,6 +17,3 @@ models/stylize/ArtFlow/experiments/ArtFlow-AdaIN/*.pth
 models/stylize/ArtFlow/experiments/ArtFlow-WCT/*.pth
 models/stylize/ArtFlow/experiments/ArtFlow-AdaIN-Portrait/*.pth
 models/stylize/SANet/*.pth
-
-# Ignore log files
-*.out

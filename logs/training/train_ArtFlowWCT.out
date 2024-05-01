@@ -1,0 +1,2895 @@
+nohup: ignoring input
+Namespace(backbone_name='resnet152', batch_size=4, debug_images_interval=50, early_stopping=False, epochs=10, gamma=0.1, input_checkpoint='', load_optimizer=False, load_params=False, log_dir='./runs', log_interval=100, lr=0.005, momentum=0.9, num_workers=6, output_dir='./gpu6/checkpoints', patience=3, record_histograms=True, step_size=3, test_size=2000, train_dataset_ann_file='data/datasets/ArtFlow-WCT/annotations/person_train2017.json', train_set_size=None, trainable_layers=3, use_mask=False, use_toy_testing_data=False, val_dataset_ann_file='data/datasets/ArtFlow-WCT/annotations/person_val2017.json', warmup_iterations=5000, weight_decay=0.0005)
+Hparams:  {'warmup_iterations': 5000, 'training_batch_size': 4, 'test_size': 2000, 'epochs': 10, 'trainable_layers': 3, 'lr': 0.005, 'momentum': 0.9, 'weight_decay': 0.0005, 'train_set_size': None, 'step_size': 3, 'gamma': 0.1, 'early_stopping': False, 'patience': 3, 'total_iterations': 0, 'total_epochs': 0, 'timeout': True}
+Loading validation image files from data/datasets/ArtFlow-WCT/val2017
+loading annotations into memory...
+Done (t=0.47s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=8.91s)
+creating index...
+index created!
+creating index...
+index created!
+2024-04-25 23:44:07,389 - artdetect.ignite.train - INFO - Training with 2 classes...
+/u/k/o/kolsur/anaconda3/envs/art/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'backbone_name' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/u/k/o/kolsur/anaconda3/envs/art/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/u/k/o/kolsur/anaconda3/envs/art/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet152_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet152_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+iou_types: ['bbox']
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+2024-04-25 23:44:42,678 - ignite.engine.engine.Engine - INFO - Engine run starting with max_epochs=10.
+2024-04-25 23:44:43,329 - artdetect.ignite.train - INFO - Started Training...
+Warm up period was set to 5000 iterations
+Epoch: 1, Iteration: 100, Loss: 0.9608369469642639
+Epoch: 1, Iteration: 200, Loss: 0.8167791366577148
+Epoch: 1, Iteration: 300, Loss: 0.8540903329849243
+Epoch: 1, Iteration: 400, Loss: 0.19686995446681976
+Epoch: 1, Iteration: 500, Loss: 0.6104135513305664
+Epoch: 1, Iteration: 600, Loss: 0.41110438108444214
+Epoch: 1, Iteration: 700, Loss: 0.3890838921070099
+Epoch: 1, Iteration: 800, Loss: 0.5969211459159851
+Epoch: 1, Iteration: 900, Loss: 0.8408803939819336
+Epoch: 1, Iteration: 1000, Loss: 0.34660738706588745
+Epoch: 1, Iteration: 1100, Loss: 1.1205118894577026
+Epoch: 1, Iteration: 1200, Loss: 0.35273975133895874
+Epoch: 1, Iteration: 1300, Loss: 0.6358312368392944
+Epoch: 1, Iteration: 1400, Loss: 0.43011051416397095
+Epoch: 1, Iteration: 1500, Loss: 0.4309137165546417
+Epoch: 1, Iteration: 1600, Loss: 0.23937441408634186
+Epoch: 1, Iteration: 1700, Loss: 0.4083203077316284
+Epoch: 1, Iteration: 1800, Loss: 0.4497836232185364
+Epoch: 1, Iteration: 1900, Loss: 0.3196450173854828
+Epoch: 1, Iteration: 2000, Loss: 0.4501480162143707
+Epoch: 1, Iteration: 2100, Loss: 0.48801904916763306
+Epoch: 1, Iteration: 2200, Loss: 0.2827549874782562
+Epoch: 1, Iteration: 2300, Loss: 0.6031258702278137
+Epoch: 1, Iteration: 2400, Loss: 0.3691869378089905
+Epoch: 1, Iteration: 2500, Loss: 0.6518581509590149
+Epoch: 1, Iteration: 2600, Loss: 0.45387136936187744
+Epoch: 1, Iteration: 2700, Loss: 0.8124421238899231
+Epoch: 1, Iteration: 2800, Loss: 0.40553921461105347
+Epoch: 1, Iteration: 2900, Loss: 0.9629734754562378
+Epoch: 1, Iteration: 3000, Loss: 0.330284982919693
+Epoch: 1, Iteration: 3100, Loss: 0.3421536386013031
+Epoch: 1, Iteration: 3200, Loss: 0.3383009433746338
+Epoch: 1, Iteration: 3300, Loss: 0.4231325089931488
+Epoch: 1, Iteration: 3400, Loss: 0.4342631697654724
+Epoch: 1, Iteration: 3500, Loss: 0.19401542842388153
+Epoch: 1, Iteration: 3600, Loss: 0.16077862679958344
+Epoch: 1, Iteration: 3700, Loss: 0.6231809258460999
+Epoch: 1, Iteration: 3800, Loss: 0.30076250433921814
+Epoch: 1, Iteration: 3900, Loss: 0.5394467115402222
+Epoch: 1, Iteration: 4000, Loss: 0.35249677300453186
+Epoch: 1, Iteration: 4100, Loss: 0.48292413353919983
+Epoch: 1, Iteration: 4200, Loss: 0.14576496183872223
+Epoch: 1, Iteration: 4300, Loss: 0.42813122272491455
+Epoch: 1, Iteration: 4400, Loss: 0.2848907709121704
+Epoch: 1, Iteration: 4500, Loss: 0.5679978132247925
+Epoch: 1, Iteration: 4600, Loss: 0.6900210380554199
+Epoch: 1, Iteration: 4700, Loss: 0.28893372416496277
+Epoch: 1, Iteration: 4800, Loss: 0.4569956064224243
+Epoch: 1, Iteration: 4900, Loss: 0.9464908838272095
+Epoch: 1, Iteration: 5000, Loss: 0.25359833240509033
+Epoch: 1, Iteration: 5100, Loss: 0.8934334516525269
+Epoch: 1, Iteration: 5200, Loss: 0.5349907875061035
+Found 1 degenerate boxes. Keeping 7 boxes.
+tensor([[420.1040, 212.0015, 439.2400, 289.3159],
+        [255.9840, 209.4176, 263.2800, 227.9118],
+        [198.3360, 206.6901, 218.7440, 277.0901],
+        [235.4640, 209.1903, 248.0240, 246.5615],
+        [215.9920, 214.4179, 232.9360, 238.5465],
+        [169.8160, 206.7020, 182.5440, 252.3992],
+        [243.4880, 210.5301, 255.0800, 251.8490]], device='cuda:0')
+Epoch: 1, Iteration: 5300, Loss: 0.627259373664856
+Epoch: 1, Iteration: 5400, Loss: 0.6004586219787598
+Epoch: 1, Iteration: 5500, Loss: 0.24483518302440643
+Epoch: 1, Iteration: 5600, Loss: 0.4851791560649872
+Epoch: 1, Iteration: 5700, Loss: 0.35681793093681335
+Epoch: 1, Iteration: 5800, Loss: 0.5462473034858704
+Epoch: 1, Iteration: 5900, Loss: 0.4339006543159485
+Epoch: 1, Iteration: 6000, Loss: 0.6336852312088013
+Epoch: 1, Iteration: 6100, Loss: 0.21066033840179443
+Epoch: 1, Iteration: 6200, Loss: 0.7843309640884399
+Epoch: 1, Iteration: 6300, Loss: 0.546288251876831
+Epoch: 1, Iteration: 6400, Loss: 0.46480199694633484
+Epoch: 1, Iteration: 6500, Loss: 0.4205496907234192
+Epoch: 1, Iteration: 6600, Loss: 0.22370478510856628
+Epoch: 1, Iteration: 6700, Loss: 0.8373078107833862
+Epoch: 1, Iteration: 6800, Loss: 0.20807984471321106
+Epoch: 1, Iteration: 6900, Loss: 0.864445686340332
+Epoch: 1, Iteration: 7000, Loss: 0.2767735719680786
+Epoch: 1, Iteration: 7100, Loss: 0.49683135747909546
+Epoch: 1, Iteration: 7200, Loss: 0.267326295375824
+Epoch: 1, Iteration: 7300, Loss: 0.7024569511413574
+Epoch: 1, Iteration: 7400, Loss: 0.43072831630706787
+Epoch: 1, Iteration: 7500, Loss: 0.4167679250240326
+Epoch: 1, Iteration: 7600, Loss: 0.5444450974464417
+Epoch: 1, Iteration: 7700, Loss: 0.20486246049404144
+Epoch: 1, Iteration: 7800, Loss: 0.29043591022491455
+Epoch: 1, Iteration: 7900, Loss: 0.47126060724258423
+Epoch: 1, Iteration: 8000, Loss: 0.42921188473701477
+Epoch: 1, Iteration: 8100, Loss: 0.21183519065380096
+Epoch: 1, Iteration: 8200, Loss: 0.2965610921382904
+Epoch: 1, Iteration: 8300, Loss: 0.7262203693389893
+Epoch: 1, Iteration: 8400, Loss: 0.3261937201023102
+Epoch: 1, Iteration: 8500, Loss: 0.29853469133377075
+Epoch: 1, Iteration: 8600, Loss: 0.27160799503326416
+Epoch: 1, Iteration: 8700, Loss: 0.36398157477378845
+Epoch: 1, Iteration: 8800, Loss: 0.2931721806526184
+Epoch: 1, Iteration: 8900, Loss: 0.2537347972393036
+Epoch: 1, Iteration: 9000, Loss: 0.5147435665130615
+Epoch: 1, Iteration: 9100, Loss: 0.16373014450073242
+Epoch: 1, Iteration: 9200, Loss: 0.17173893749713898
+Epoch: 1, Iteration: 9300, Loss: 0.5000393390655518
+Epoch: 1, Iteration: 9400, Loss: 0.261478990316391
+Epoch: 1, Iteration: 9500, Loss: 0.7150726914405823
+Epoch: 1, Iteration: 9600, Loss: 0.0982399731874466
+Epoch: 1, Iteration: 9700, Loss: 0.4041772782802582
+Epoch: 1, Iteration: 9800, Loss: 0.7164081335067749
+Epoch: 1, Iteration: 9900, Loss: 0.791277289390564
+Epoch: 1, Iteration: 10000, Loss: 0.6779054999351501
+Epoch: 1, Iteration: 10100, Loss: 0.4639837145805359
+Epoch: 1, Iteration: 10200, Loss: 0.5858063697814941
+Epoch: 1, Iteration: 10300, Loss: 0.6223341822624207
+Epoch: 1, Iteration: 10400, Loss: 0.38264894485473633
+Epoch: 1, Iteration: 10500, Loss: 0.5195634365081787
+Epoch: 1, Iteration: 10600, Loss: 0.1819971203804016
+Epoch: 1, Iteration: 10700, Loss: 0.6307239532470703
+Epoch: 1, Iteration: 10800, Loss: 0.34145763516426086
+Epoch: 1, Iteration: 10900, Loss: 0.37520453333854675
+Epoch: 1, Iteration: 11000, Loss: 0.22102545201778412
+Epoch: 1, Iteration: 11100, Loss: 0.26218941807746887
+Epoch: 1, Iteration: 11200, Loss: 0.41385141015052795
+Epoch: 1, Iteration: 11300, Loss: 0.2139136791229248
+Epoch: 1, Iteration: 11400, Loss: 0.8182812333106995
+Epoch: 1, Iteration: 11500, Loss: 0.17706741392612457
+Epoch: 1, Iteration: 11600, Loss: 0.572199821472168
+Epoch: 1, Iteration: 11700, Loss: 0.7542330026626587
+Epoch: 1, Iteration: 11800, Loss: 0.9220515489578247
+Epoch: 1, Iteration: 11900, Loss: 0.4715671241283417
+Epoch: 1, Iteration: 12000, Loss: 0.732209324836731
+Epoch: 1, Iteration: 12100, Loss: 0.3288331627845764
+Epoch: 1, Iteration: 12200, Loss: 0.42987263202667236
+Epoch: 1, Iteration: 12300, Loss: 0.2347756028175354
+Epoch: 1, Iteration: 12400, Loss: 0.1549471914768219
+Epoch: 1, Iteration: 12500, Loss: 0.12675201892852783
+Epoch: 1, Iteration: 12600, Loss: 0.5664657354354858
+Epoch: 1, Iteration: 12700, Loss: 0.3892737329006195
+Epoch: 1, Iteration: 12800, Loss: 0.3107234239578247
+Epoch: 1, Iteration: 12900, Loss: 0.451046347618103
+Epoch: 1, Iteration: 13000, Loss: 0.4907158315181732
+Epoch: 1, Iteration: 13100, Loss: 0.5485423803329468
+Epoch: 1, Iteration: 13200, Loss: 0.7219990491867065
+Epoch: 1, Iteration: 13300, Loss: 0.2777947187423706
+Epoch: 1, Iteration: 13400, Loss: 0.38808730244636536
+Epoch: 1, Iteration: 13500, Loss: 0.5249150395393372
+Epoch: 1, Iteration: 13600, Loss: 0.48022255301475525
+Epoch: 1, Iteration: 13700, Loss: 0.12439163029193878
+Epoch: 1, Iteration: 13800, Loss: 0.1643327921628952
+Epoch: 1, Iteration: 13900, Loss: 0.2130245566368103
+Epoch: 1, Iteration: 14000, Loss: 0.2203443944454193
+Epoch: 1, Iteration: 14100, Loss: 0.7946372032165527
+Epoch: 1, Iteration: 14200, Loss: 0.41198793053627014
+Epoch: 1, Iteration: 14300, Loss: 0.4029780626296997
+Epoch: 1, Iteration: 14400, Loss: 0.22722452878952026
+Epoch: 1, Iteration: 14500, Loss: 0.4583781361579895
+Epoch: 1, Iteration: 14600, Loss: 0.36503085494041443
+
+ ----------------------------------------------------
+| Time profiling stats (in seconds):                 |
+ ----------------------------------------------------
+total  |  min/index  |  max/index  |  mean  |  std
+
+Processing function:
+8993.30176 | 0.34474/8137 | 135.03888/0 | 0.61312 | 1.12832
+
+Dataflow:
+83.97812 | 0.00010/7446 | 0.39190/14667 | 0.00573 | 0.01393
+
+Event handlers:
+966.76910
+
+- Events.STARTED: ['run.<locals>.on_training_started']
+0.00167
+
+- Events.EPOCH_STARTED: ['run.<locals>.on_epoch_started']
+0.00125
+
+- Events.ITERATION_STARTED: []
+0.09185 | 0.00000/7481 | 0.04658/575 | 0.00001 | 0.00039
+
+- Events.ITERATION_COMPLETED: ['Engine._handler_wrapper.<locals>.wrapper', 'run.<locals>.on_iteration_completed']
+966.44415 | 0.00021/7938 | 32.50097/1999 | 0.06589 | 0.99773
+
+- Events.EPOCH_COMPLETED: ['run.<locals>.log_intermediate_results', 'run.<locals>.on_epoch_completed']
+not yet triggered
+
+- Events.COMPLETED: ['run.<locals>.on_training_completed']
+not yet triggered
+
+2024-04-26 02:32:20,185 - ignite.engine.engine.Engine - INFO - Engine run starting with max_epochs=1.
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Drawing debug image "validation/image_50_0"
+Drawing debug image "validation/image_50_1"
+Drawing debug image "validation/image_50_2"
+Drawing debug image "validation/image_50_3"
+Evaluation: Iteration: 100
+Drawing debug image "validation/image_100_0"
+Drawing debug image "validation/image_100_1"
+Drawing debug image "validation/image_100_2"
+Drawing debug image "validation/image_100_3"
+Drawing debug image "validation/image_150_0"
+Drawing debug image "validation/image_150_1"
+Drawing debug image "validation/image_150_2"
+Drawing debug image "validation/image_150_3"
+Evaluation: Iteration: 200
+Drawing debug image "validation/image_200_0"
+Drawing debug image "validation/image_200_1"
+Drawing debug image "validation/image_200_2"
+Drawing debug image "validation/image_200_3"
+Drawing debug image "validation/image_250_0"
+Drawing debug image "validation/image_250_1"
+Drawing debug image "validation/image_250_2"
+Drawing debug image "validation/image_250_3"
+Evaluation: Iteration: 300
+Drawing debug image "validation/image_300_0"
+Drawing debug image "validation/image_300_1"
+Drawing debug image "validation/image_300_2"
+Drawing debug image "validation/image_300_3"
+Drawing debug image "validation/image_350_0"
+Drawing debug image "validation/image_350_1"
+Drawing debug image "validation/image_350_2"
+Drawing debug image "validation/image_350_3"
+Evaluation: Iteration: 400
+Drawing debug image "validation/image_400_0"
+Drawing debug image "validation/image_400_1"
+Drawing debug image "validation/image_400_2"
+Drawing debug image "validation/image_400_3"
+Drawing debug image "validation/image_450_0"
+Drawing debug image "validation/image_450_1"
+Drawing debug image "validation/image_450_2"
+Drawing debug image "validation/image_450_3"
+Evaluation: Iteration: 500
+Drawing debug image "validation/image_500_0"
+Drawing debug image "validation/image_500_1"
+Drawing debug image "validation/image_500_2"
+Drawing debug image "validation/image_500_3"
+Accumulating evaluation results...
+DONE (t=0.93s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.254
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.518
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.218
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.106
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.296
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.445
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.119
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.308
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.395
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.218
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.463
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.586
+Accumulating evaluation results...
+DONE (t=0.95s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.254
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.518
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.218
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.106
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.296
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.445
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.119
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.308
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.395
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.218
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.463
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.586
+Accumulating evaluation results...
+DONE (t=0.83s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.254
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.518
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.218
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.106
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.296
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.445
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.119
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.308
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.395
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.218
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.463
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.586
+2024-04-26 02:34:47,720 - ignite.engine.engine.Engine - INFO - Epoch[1] Complete. Time taken: 00:02:26.323
+2024-04-26 02:34:47,720 - ignite.engine.engine.Engine - INFO - Engine run complete. Time taken: 00:02:27.535
+Saving model checkpoint
+Model checkpoint from epoch 1 was saved at ./gpu6/checkpoints/model_epoch_1.pth
+2024-04-26 02:34:49,204 - ignite.engine.engine.Engine - INFO - Epoch[1] Complete. Time taken: 02:50:04.283
+Epoch: 2, Iteration: 14700, Loss: 0.15190333127975464
+Epoch: 2, Iteration: 14800, Loss: 0.8664334416389465
+Epoch: 2, Iteration: 14900, Loss: 0.2631787657737732
+Epoch: 2, Iteration: 15000, Loss: 0.19876958429813385
+Epoch: 2, Iteration: 15100, Loss: 0.5804614424705505
+Epoch: 2, Iteration: 15200, Loss: 0.43399813771247864
+Epoch: 2, Iteration: 15300, Loss: 0.14729690551757812
+Epoch: 2, Iteration: 15400, Loss: 0.3950575292110443
+Epoch: 2, Iteration: 15500, Loss: 0.45164474844932556
+Epoch: 2, Iteration: 15600, Loss: 0.6845405697822571
+Epoch: 2, Iteration: 15700, Loss: 0.21620799601078033
+Epoch: 2, Iteration: 15800, Loss: 0.7410415410995483
+Epoch: 2, Iteration: 15900, Loss: 0.5032384395599365
+Epoch: 2, Iteration: 16000, Loss: 0.25735020637512207
+Epoch: 2, Iteration: 16100, Loss: 0.5745404362678528
+Epoch: 2, Iteration: 16200, Loss: 0.18653088808059692
+Epoch: 2, Iteration: 16300, Loss: 1.1354527473449707
+Epoch: 2, Iteration: 16400, Loss: 0.5461763739585876
+Epoch: 2, Iteration: 16500, Loss: 0.5990301966667175
+Epoch: 2, Iteration: 16600, Loss: 0.9684088826179504
+Epoch: 2, Iteration: 16700, Loss: 0.5346665382385254
+Epoch: 2, Iteration: 16800, Loss: 0.2087683528661728
+Epoch: 2, Iteration: 16900, Loss: 0.8688399791717529
+Epoch: 2, Iteration: 17000, Loss: 0.5346647500991821
+Epoch: 2, Iteration: 17100, Loss: 0.3010651469230652
+Epoch: 2, Iteration: 17200, Loss: 0.3734334111213684
+Epoch: 2, Iteration: 17300, Loss: 0.3988197147846222
+Epoch: 2, Iteration: 17400, Loss: 0.37077075242996216
+Epoch: 2, Iteration: 17500, Loss: 0.19871896505355835
+Epoch: 2, Iteration: 17600, Loss: 0.37967249751091003
+Epoch: 2, Iteration: 17700, Loss: 0.5030907392501831
+Epoch: 2, Iteration: 17800, Loss: 0.5641071796417236
+Epoch: 2, Iteration: 17900, Loss: 0.4344364404678345
+Epoch: 2, Iteration: 18000, Loss: 0.3996744453907013
+Epoch: 2, Iteration: 18100, Loss: 0.5266812443733215
+Epoch: 2, Iteration: 18200, Loss: 0.32932326197624207
+Epoch: 2, Iteration: 18300, Loss: 0.26902005076408386
+Epoch: 2, Iteration: 18400, Loss: 0.35364413261413574
+Epoch: 2, Iteration: 18500, Loss: 0.5674669146537781
+Epoch: 2, Iteration: 18600, Loss: 0.39063605666160583
+Epoch: 2, Iteration: 18700, Loss: 0.7151881456375122
+Epoch: 2, Iteration: 18800, Loss: 0.623149573802948
+Epoch: 2, Iteration: 18900, Loss: 0.43784111738204956
+Epoch: 2, Iteration: 19000, Loss: 0.6144471168518066
+Epoch: 2, Iteration: 19100, Loss: 0.46740657091140747
+Epoch: 2, Iteration: 19200, Loss: 0.2554812729358673
+Epoch: 2, Iteration: 19300, Loss: 0.11599928140640259
+Epoch: 2, Iteration: 19400, Loss: 0.1773359328508377
+Epoch: 2, Iteration: 19500, Loss: 0.6167683601379395
+Epoch: 2, Iteration: 19600, Loss: 0.4563974142074585
+Epoch: 2, Iteration: 19700, Loss: 0.15591540932655334
+Epoch: 2, Iteration: 19800, Loss: 0.9858067035675049
+Epoch: 2, Iteration: 19900, Loss: 0.5829766988754272
+Epoch: 2, Iteration: 20000, Loss: 0.21288397908210754
+Found 1 degenerate boxes. Keeping 7 boxes.
+tensor([[420.1040, 212.0015, 439.2400, 289.3159],
+        [255.9840, 209.4176, 263.2800, 227.9118],
+        [198.3360, 206.6901, 218.7440, 277.0901],
+        [235.4640, 209.1903, 248.0240, 246.5615],
+        [215.9920, 214.4179, 232.9360, 238.5465],
+        [169.8160, 206.7020, 182.5440, 252.3992],
+        [243.4880, 210.5301, 255.0800, 251.8490]], device='cuda:0')
+Epoch: 2, Iteration: 20100, Loss: 0.46925613284111023
+Epoch: 2, Iteration: 20200, Loss: 0.2306654006242752
+Epoch: 2, Iteration: 20300, Loss: 0.3879835605621338
+Epoch: 2, Iteration: 20400, Loss: 0.2859918773174286
+Epoch: 2, Iteration: 20500, Loss: 0.3523285686969757
+Epoch: 2, Iteration: 20600, Loss: 0.83319091796875
+Epoch: 2, Iteration: 20700, Loss: 0.25524526834487915
+Epoch: 2, Iteration: 20800, Loss: 0.7310846447944641
+Epoch: 2, Iteration: 20900, Loss: 0.6453844308853149
+Epoch: 2, Iteration: 21000, Loss: 0.3606591820716858
+Epoch: 2, Iteration: 21100, Loss: 0.23699112236499786
+Epoch: 2, Iteration: 21200, Loss: 0.5385799407958984
+Epoch: 2, Iteration: 21300, Loss: 0.18144017457962036
+Epoch: 2, Iteration: 21400, Loss: 0.307711124420166
+Epoch: 2, Iteration: 21500, Loss: 0.7325727939605713
+Epoch: 2, Iteration: 21600, Loss: 0.6311541795730591
+Epoch: 2, Iteration: 21700, Loss: 0.3091158866882324
+Epoch: 2, Iteration: 21800, Loss: 0.5675620436668396
+Epoch: 2, Iteration: 21900, Loss: 0.9055556058883667
+Epoch: 2, Iteration: 22000, Loss: 0.4790372848510742
+Epoch: 2, Iteration: 22100, Loss: 0.4886012077331543
+Epoch: 2, Iteration: 22200, Loss: 0.449224054813385
+Epoch: 2, Iteration: 22300, Loss: 0.1813293695449829
+Epoch: 2, Iteration: 22400, Loss: 0.49966639280319214
+Epoch: 2, Iteration: 22500, Loss: 0.09340482950210571
+Epoch: 2, Iteration: 22600, Loss: 0.2282276153564453
+Epoch: 2, Iteration: 22700, Loss: 0.443240761756897
+Epoch: 2, Iteration: 22800, Loss: 0.3768542408943176
+Epoch: 2, Iteration: 22900, Loss: 0.4346376657485962
+Epoch: 2, Iteration: 23000, Loss: 0.15056325495243073
+Epoch: 2, Iteration: 23100, Loss: 0.2860155701637268
+Epoch: 2, Iteration: 23200, Loss: 0.3313072919845581
+Epoch: 2, Iteration: 23300, Loss: 0.6512227058410645
+Epoch: 2, Iteration: 23400, Loss: 0.18042418360710144
+Epoch: 2, Iteration: 23500, Loss: 0.24325114488601685
+Epoch: 2, Iteration: 23600, Loss: 0.8873818516731262
+Epoch: 2, Iteration: 23700, Loss: 0.3804321587085724
+Epoch: 2, Iteration: 23800, Loss: 0.4931356608867645
+Epoch: 2, Iteration: 23900, Loss: 0.14610034227371216
+Epoch: 2, Iteration: 24000, Loss: 0.2960667014122009
+Epoch: 2, Iteration: 24100, Loss: 1.0165189504623413
+Epoch: 2, Iteration: 24200, Loss: 0.21788378059864044
+Epoch: 2, Iteration: 24300, Loss: 0.1193859800696373
+Epoch: 2, Iteration: 24400, Loss: 0.23125475645065308
+Epoch: 2, Iteration: 24500, Loss: 0.44197407364845276
+Epoch: 2, Iteration: 24600, Loss: 0.5107163786888123
+Epoch: 2, Iteration: 24700, Loss: 0.6589179039001465
+Epoch: 2, Iteration: 24800, Loss: 1.075709581375122
+Epoch: 2, Iteration: 24900, Loss: 0.7829422950744629
+Epoch: 2, Iteration: 25000, Loss: 0.3629263937473297
+Epoch: 2, Iteration: 25100, Loss: 0.6185941696166992
+Epoch: 2, Iteration: 25200, Loss: 0.4917013943195343
+Epoch: 2, Iteration: 25300, Loss: 0.5727865099906921
+Epoch: 2, Iteration: 25400, Loss: 0.24143333733081818
+Epoch: 2, Iteration: 25500, Loss: 0.25064724683761597
+Epoch: 2, Iteration: 25600, Loss: 0.24447065591812134
+Epoch: 2, Iteration: 25700, Loss: 0.4184856116771698
+Epoch: 2, Iteration: 25800, Loss: 0.3570025563240051
+Epoch: 2, Iteration: 25900, Loss: 0.37510958313941956
+Epoch: 2, Iteration: 26000, Loss: 0.4175696074962616
+Epoch: 2, Iteration: 26100, Loss: 0.3992089033126831
+Epoch: 2, Iteration: 26200, Loss: 0.6450929641723633
+Epoch: 2, Iteration: 26300, Loss: 0.21459683775901794
+Epoch: 2, Iteration: 26400, Loss: 0.1852257251739502
+Epoch: 2, Iteration: 26500, Loss: 0.7534871697425842
+Epoch: 2, Iteration: 26600, Loss: 0.36121004819869995
+Epoch: 2, Iteration: 26700, Loss: 0.48303383588790894
+Epoch: 2, Iteration: 26800, Loss: 0.8054229021072388
+Epoch: 2, Iteration: 26900, Loss: 0.4499993622303009
+Epoch: 2, Iteration: 27000, Loss: 0.6648350358009338
+Epoch: 2, Iteration: 27100, Loss: 0.22650837898254395
+Epoch: 2, Iteration: 27200, Loss: 0.3697744309902191
+Epoch: 2, Iteration: 27300, Loss: 0.5314688086509705
+Epoch: 2, Iteration: 27400, Loss: 0.822891354560852
+Epoch: 2, Iteration: 27500, Loss: 0.7238302230834961
+Epoch: 2, Iteration: 27600, Loss: 0.36982327699661255
+Epoch: 2, Iteration: 27700, Loss: 0.3347882330417633
+Epoch: 2, Iteration: 27800, Loss: 0.42635485529899597
+Epoch: 2, Iteration: 27900, Loss: 0.398513525724411
+Epoch: 2, Iteration: 28000, Loss: 0.0910964161157608
+Epoch: 2, Iteration: 28100, Loss: 0.4319136440753937
+Epoch: 2, Iteration: 28200, Loss: 0.6960694193840027
+Epoch: 2, Iteration: 28300, Loss: 0.487049400806427
+Epoch: 2, Iteration: 28400, Loss: 0.3770049810409546
+Epoch: 2, Iteration: 28500, Loss: 0.1948602944612503
+Epoch: 2, Iteration: 28600, Loss: 0.7932662963867188
+Epoch: 2, Iteration: 28700, Loss: 0.5110839009284973
+Epoch: 2, Iteration: 28800, Loss: 0.16618536412715912
+Epoch: 2, Iteration: 28900, Loss: 0.4142489731311798
+Epoch: 2, Iteration: 29000, Loss: 0.18234483897686005
+Epoch: 2, Iteration: 29100, Loss: 0.3382944166660309
+Epoch: 2, Iteration: 29200, Loss: 0.31818392872810364
+Epoch: 2, Iteration: 29300, Loss: 0.41730865836143494
+
+ ----------------------------------------------------
+| Time profiling stats (in seconds):                 |
+ ----------------------------------------------------
+total  |  min/index  |  max/index  |  mean  |  std
+
+Processing function:
+15708.62207 | 0.27696/29335 | 135.03888/0 | 0.53547 | 0.80246
+
+Dataflow:
+118.40601 | 0.00010/7446 | 2.10876/14667 | 0.00404 | 0.01627
+
+Event handlers:
+1792.98230
+
+- Events.STARTED: ['run.<locals>.on_training_started']
+0.00167
+
+- Events.EPOCH_STARTED: ['run.<locals>.on_epoch_started']
+0.00281 | 0.00125/0 | 0.00156/1 | 0.00141 | 0.00022
+
+- Events.ITERATION_STARTED: []
+0.20412 | 0.00000/7481 | 0.04658/575 | 0.00001 | 0.00034
+
+- Events.ITERATION_COMPLETED: ['Engine._handler_wrapper.<locals>.wrapper', 'run.<locals>.on_iteration_completed']
+1642.37292 | 0.00021/7938 | 32.50097/1999 | 0.05598 | 0.84902
+
+- Events.EPOCH_COMPLETED: ['run.<locals>.log_intermediate_results', 'run.<locals>.on_epoch_completed']
+149.93854
+
+- Events.COMPLETED: ['run.<locals>.on_training_completed']
+not yet triggered
+
+2024-04-26 04:38:46,331 - ignite.engine.engine.Engine - INFO - Engine run starting with max_epochs=1.
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Drawing debug image "validation/image_50_0"
+Drawing debug image "validation/image_50_1"
+Drawing debug image "validation/image_50_2"
+Drawing debug image "validation/image_50_3"
+Evaluation: Iteration: 100
+Drawing debug image "validation/image_100_0"
+Drawing debug image "validation/image_100_1"
+Drawing debug image "validation/image_100_2"
+Drawing debug image "validation/image_100_3"
+Drawing debug image "validation/image_150_0"
+Drawing debug image "validation/image_150_1"
+Drawing debug image "validation/image_150_2"
+Drawing debug image "validation/image_150_3"
+Evaluation: Iteration: 200
+Drawing debug image "validation/image_200_0"
+Drawing debug image "validation/image_200_1"
+Drawing debug image "validation/image_200_2"
+Drawing debug image "validation/image_200_3"
+Drawing debug image "validation/image_250_0"
+Drawing debug image "validation/image_250_1"
+Drawing debug image "validation/image_250_2"
+Drawing debug image "validation/image_250_3"
+Evaluation: Iteration: 300
+Drawing debug image "validation/image_300_0"
+Drawing debug image "validation/image_300_1"
+Drawing debug image "validation/image_300_2"
+Drawing debug image "validation/image_300_3"
+Drawing debug image "validation/image_350_0"
+Drawing debug image "validation/image_350_1"
+Drawing debug image "validation/image_350_2"
+Drawing debug image "validation/image_350_3"
+Evaluation: Iteration: 400
+Drawing debug image "validation/image_400_0"
+Drawing debug image "validation/image_400_1"
+Drawing debug image "validation/image_400_2"
+Drawing debug image "validation/image_400_3"
+Drawing debug image "validation/image_450_0"
+Drawing debug image "validation/image_450_1"
+Drawing debug image "validation/image_450_2"
+Drawing debug image "validation/image_450_3"
+Evaluation: Iteration: 500
+Drawing debug image "validation/image_500_0"
+Drawing debug image "validation/image_500_1"
+Drawing debug image "validation/image_500_2"
+Drawing debug image "validation/image_500_3"
+Accumulating evaluation results...
+DONE (t=1.04s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.286
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.560
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.262
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.116
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.345
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.478
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.130
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.341
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.424
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.239
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.492
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.628
+Accumulating evaluation results...
+DONE (t=1.00s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.286
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.560
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.262
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.116
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.345
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.478
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.130
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.341
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.424
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.239
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.492
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.628
+Accumulating evaluation results...
+DONE (t=0.83s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.286
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.560
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.262
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.116
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.345
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.478
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.130
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.341
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.424
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.239
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.492
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.628
+2024-04-26 04:41:13,637 - ignite.engine.engine.Engine - INFO - Epoch[1] Complete. Time taken: 00:02:26.102
+2024-04-26 04:41:13,637 - ignite.engine.engine.Engine - INFO - Engine run complete. Time taken: 00:02:27.305
+Saving model checkpoint
+Model checkpoint from epoch 2 was saved at ./gpu6/checkpoints/model_epoch_2.pth
+2024-04-26 04:41:14,890 - ignite.engine.engine.Engine - INFO - Epoch[2] Complete. Time taken: 02:06:25.686
+Epoch: 3, Iteration: 29400, Loss: 0.4431629776954651
+Epoch: 3, Iteration: 29500, Loss: 0.30246931314468384
+Epoch: 3, Iteration: 29600, Loss: 0.19043214619159698
+Epoch: 3, Iteration: 29700, Loss: 0.45533376932144165
+Epoch: 3, Iteration: 29800, Loss: 0.7929843664169312
+Epoch: 3, Iteration: 29900, Loss: 0.5966659188270569
+Epoch: 3, Iteration: 30000, Loss: 0.30779439210891724
+Epoch: 3, Iteration: 30100, Loss: 0.40417706966400146
+Epoch: 3, Iteration: 30200, Loss: 0.3198105990886688
+Epoch: 3, Iteration: 30300, Loss: 0.3381512761116028
+Epoch: 3, Iteration: 30400, Loss: 0.49015122652053833
+Epoch: 3, Iteration: 30500, Loss: 0.5469567179679871
+Epoch: 3, Iteration: 30600, Loss: 0.4924412965774536
+Epoch: 3, Iteration: 30700, Loss: 0.4165087342262268
+Epoch: 3, Iteration: 30800, Loss: 0.5245159864425659
+Epoch: 3, Iteration: 30900, Loss: 0.4117511212825775
+Epoch: 3, Iteration: 31000, Loss: 0.3190990388393402
+Epoch: 3, Iteration: 31100, Loss: 0.36911725997924805
+Epoch: 3, Iteration: 31200, Loss: 0.3503860831260681
+Epoch: 3, Iteration: 31300, Loss: 0.2738089859485626
+Epoch: 3, Iteration: 31400, Loss: 0.5754194855690002
+Epoch: 3, Iteration: 31500, Loss: 0.46126267313957214
+Epoch: 3, Iteration: 31600, Loss: 0.29367074370384216
+Epoch: 3, Iteration: 31700, Loss: 0.5860486030578613
+Epoch: 3, Iteration: 31800, Loss: 0.11063161492347717
+Epoch: 3, Iteration: 31900, Loss: 0.4204878807067871
+Epoch: 3, Iteration: 32000, Loss: 0.40583714842796326
+Epoch: 3, Iteration: 32100, Loss: 0.593585729598999
+Epoch: 3, Iteration: 32200, Loss: 0.3997419476509094
+Epoch: 3, Iteration: 32300, Loss: 0.20541471242904663
+Epoch: 3, Iteration: 32400, Loss: 0.4484142065048218
+Epoch: 3, Iteration: 32500, Loss: 0.31943458318710327
+Epoch: 3, Iteration: 32600, Loss: 0.6263784766197205
+Epoch: 3, Iteration: 32700, Loss: 0.6425477862358093
+Epoch: 3, Iteration: 32800, Loss: 0.23791375756263733
+Epoch: 3, Iteration: 32900, Loss: 0.5235867500305176
+Epoch: 3, Iteration: 33000, Loss: 0.7420883774757385
+Epoch: 3, Iteration: 33100, Loss: 0.278565376996994
+Epoch: 3, Iteration: 33200, Loss: 0.4794919192790985
+Epoch: 3, Iteration: 33300, Loss: 0.2031257152557373
+Epoch: 3, Iteration: 33400, Loss: 0.15460126101970673
+Epoch: 3, Iteration: 33500, Loss: 0.43382710218429565
+Epoch: 3, Iteration: 33600, Loss: 0.12837569415569305
+Epoch: 3, Iteration: 33700, Loss: 0.4933551549911499
+Epoch: 3, Iteration: 33800, Loss: 0.41043686866760254
+Epoch: 3, Iteration: 33900, Loss: 0.24861563742160797
+Epoch: 3, Iteration: 34000, Loss: 0.434311181306839
+Epoch: 3, Iteration: 34100, Loss: 0.35200199484825134
+Epoch: 3, Iteration: 34200, Loss: 0.5115624666213989
+Epoch: 3, Iteration: 34300, Loss: 0.19539755582809448
+Epoch: 3, Iteration: 34400, Loss: 0.19861464202404022
+Epoch: 3, Iteration: 34500, Loss: 0.5161231756210327
+Epoch: 3, Iteration: 34600, Loss: 0.7381335496902466
+Epoch: 3, Iteration: 34700, Loss: 0.18443571031093597
+Epoch: 3, Iteration: 34800, Loss: 0.2255590707063675
+Epoch: 3, Iteration: 34900, Loss: 0.2711455821990967
+Epoch: 3, Iteration: 35000, Loss: 0.3176645040512085
+Epoch: 3, Iteration: 35100, Loss: 0.36907559633255005
+Epoch: 3, Iteration: 35200, Loss: 0.5618406534194946
+Epoch: 3, Iteration: 35300, Loss: 0.5958868265151978
+Epoch: 3, Iteration: 35400, Loss: 0.3180806636810303
+Epoch: 3, Iteration: 35500, Loss: 0.5252427458763123
+Epoch: 3, Iteration: 35600, Loss: 0.3318125605583191
+Epoch: 3, Iteration: 35700, Loss: 0.6980137228965759
+Epoch: 3, Iteration: 35800, Loss: 0.45513319969177246
+Epoch: 3, Iteration: 35900, Loss: 0.46100157499313354
+Epoch: 3, Iteration: 36000, Loss: 0.2656668722629547
+Epoch: 3, Iteration: 36100, Loss: 0.27664661407470703
+Epoch: 3, Iteration: 36200, Loss: 0.43038713932037354
+Epoch: 3, Iteration: 36300, Loss: 0.4483761489391327
+Epoch: 3, Iteration: 36400, Loss: 0.3937147855758667
+Epoch: 3, Iteration: 36500, Loss: 0.27127665281295776
+Epoch: 3, Iteration: 36600, Loss: 0.15076304972171783
+Epoch: 3, Iteration: 36700, Loss: 0.3355519473552704
+Epoch: 3, Iteration: 36800, Loss: 0.3710625171661377
+Epoch: 3, Iteration: 36900, Loss: 0.474787175655365
+Epoch: 3, Iteration: 37000, Loss: 1.4273666143417358
+Epoch: 3, Iteration: 37100, Loss: 0.292813241481781
+Epoch: 3, Iteration: 37200, Loss: 0.326735258102417
+Epoch: 3, Iteration: 37300, Loss: 1.2239084243774414
+Epoch: 3, Iteration: 37400, Loss: 0.433782160282135
+Epoch: 3, Iteration: 37500, Loss: 1.2632575035095215
+Epoch: 3, Iteration: 37600, Loss: 0.13412615656852722
+Epoch: 3, Iteration: 37700, Loss: 0.4260309040546417
+Epoch: 3, Iteration: 37800, Loss: 0.5409781336784363
+Epoch: 3, Iteration: 37900, Loss: 0.1942470222711563
+Epoch: 3, Iteration: 38000, Loss: 0.2818830609321594
+Epoch: 3, Iteration: 38100, Loss: 0.30939990282058716
+Epoch: 3, Iteration: 38200, Loss: 0.380968302488327
+Epoch: 3, Iteration: 38300, Loss: 0.22303059697151184
+Epoch: 3, Iteration: 38400, Loss: 0.349696546792984
+Epoch: 3, Iteration: 38500, Loss: 0.3950757682323456
+Epoch: 3, Iteration: 38600, Loss: 0.394296258687973
+Epoch: 3, Iteration: 38700, Loss: 0.602432370185852
+Epoch: 3, Iteration: 38800, Loss: 0.36009418964385986
+Epoch: 3, Iteration: 38900, Loss: 0.20357990264892578
+Epoch: 3, Iteration: 39000, Loss: 0.2060922235250473
+Epoch: 3, Iteration: 39100, Loss: 0.15809689462184906
+Epoch: 3, Iteration: 39200, Loss: 0.5638280510902405
+Epoch: 3, Iteration: 39300, Loss: 0.19806227087974548
+Found 1 degenerate boxes. Keeping 7 boxes.
+tensor([[420.1040, 212.0015, 439.2400, 289.3159],
+        [255.9840, 209.4176, 263.2800, 227.9118],
+        [198.3360, 206.6901, 218.7440, 277.0901],
+        [235.4640, 209.1903, 248.0240, 246.5615],
+        [215.9920, 214.4179, 232.9360, 238.5465],
+        [169.8160, 206.7020, 182.5440, 252.3992],
+        [243.4880, 210.5301, 255.0800, 251.8490]], device='cuda:0')
+Epoch: 3, Iteration: 39400, Loss: 0.53614741563797
+Epoch: 3, Iteration: 39500, Loss: 0.3945809006690979
+Epoch: 3, Iteration: 39600, Loss: 0.6058512926101685
+Epoch: 3, Iteration: 39700, Loss: 0.5219153761863708
+Epoch: 3, Iteration: 39800, Loss: 0.5115271806716919
+Epoch: 3, Iteration: 39900, Loss: 0.32853057980537415
+Epoch: 3, Iteration: 40000, Loss: 0.2046872079372406
+Epoch: 3, Iteration: 40100, Loss: 0.19367653131484985
+Epoch: 3, Iteration: 40200, Loss: 0.23640023171901703
+Epoch: 3, Iteration: 40300, Loss: 0.8337454795837402
+Epoch: 3, Iteration: 40400, Loss: 0.3327871859073639
+Epoch: 3, Iteration: 40500, Loss: 0.19332236051559448
+Epoch: 3, Iteration: 40600, Loss: 0.18635638058185577
+Epoch: 3, Iteration: 40700, Loss: 0.3813967704772949
+Epoch: 3, Iteration: 40800, Loss: 0.26562246680259705
+Epoch: 3, Iteration: 40900, Loss: 0.7790939211845398
+Epoch: 3, Iteration: 41000, Loss: 0.35315197706222534
+Epoch: 3, Iteration: 41100, Loss: 0.3056398034095764
+Epoch: 3, Iteration: 41200, Loss: 0.2883135676383972
+Epoch: 3, Iteration: 41300, Loss: 0.55647873878479
+Epoch: 3, Iteration: 41400, Loss: 0.3495045304298401
+Epoch: 3, Iteration: 41500, Loss: 0.1919654756784439
+Epoch: 3, Iteration: 41600, Loss: 0.5395728349685669
+Epoch: 3, Iteration: 41700, Loss: 0.49560171365737915
+Epoch: 3, Iteration: 41800, Loss: 0.26627981662750244
+Epoch: 3, Iteration: 41900, Loss: 0.2404061257839203
+Epoch: 3, Iteration: 42000, Loss: 0.6179311871528625
+Epoch: 3, Iteration: 42100, Loss: 0.5781880021095276
+Epoch: 3, Iteration: 42200, Loss: 0.3284488618373871
+Epoch: 3, Iteration: 42300, Loss: 0.31704339385032654
+Epoch: 3, Iteration: 42400, Loss: 1.1202963590621948
+Epoch: 3, Iteration: 42500, Loss: 0.5077882409095764
+Epoch: 3, Iteration: 42600, Loss: 0.9143899083137512
+Epoch: 3, Iteration: 42700, Loss: 0.8361219167709351
+Epoch: 3, Iteration: 42800, Loss: 0.4107857346534729
+Epoch: 3, Iteration: 42900, Loss: 0.6095044016838074
+Epoch: 3, Iteration: 43000, Loss: 0.3243742287158966
+Epoch: 3, Iteration: 43100, Loss: 0.4470580816268921
+Epoch: 3, Iteration: 43200, Loss: 0.21894919872283936
+Epoch: 3, Iteration: 43300, Loss: 0.3088873624801636
+Epoch: 3, Iteration: 43400, Loss: 0.2864993214607239
+Epoch: 3, Iteration: 43500, Loss: 0.6686335802078247
+Epoch: 3, Iteration: 43600, Loss: 0.20400112867355347
+Epoch: 3, Iteration: 43700, Loss: 0.1922040581703186
+Epoch: 3, Iteration: 43800, Loss: 0.2981724739074707
+Epoch: 3, Iteration: 43900, Loss: 0.2739722430706024
+Epoch: 3, Iteration: 44000, Loss: 0.26804712414741516
+
+ ----------------------------------------------------
+| Time profiling stats (in seconds):                 |
+ ----------------------------------------------------
+total  |  min/index  |  max/index  |  mean  |  std
+
+Processing function:
+21691.50781 | 0.26821/44003 | 135.03888/0 | 0.49294 | 0.65855
+
+Dataflow:
+140.30994 | 0.00010/36369 | 2.10876/14667 | 0.00319 | 0.01677
+
+Event handlers:
+2478.75146
+
+- Events.STARTED: ['run.<locals>.on_training_started']
+0.00167
+
+- Events.EPOCH_STARTED: ['run.<locals>.on_epoch_started']
+0.00433 | 0.00125/0 | 0.00156/1 | 0.00144 | 0.00017
+
+- Events.ITERATION_STARTED: []
+0.25710 | 0.00000/7481 | 0.04658/575 | 0.00001 | 0.00029
+
+- Events.ITERATION_COMPLETED: ['Engine._handler_wrapper.<locals>.wrapper', 'run.<locals>.on_iteration_completed']
+2178.37402 | 0.00021/7938 | 32.50097/1999 | 0.04950 | 0.75604
+
+- Events.EPOCH_COMPLETED: ['run.<locals>.log_intermediate_results', 'run.<locals>.on_epoch_completed']
+299.51288 | 149.57433/1 | 149.93854/0 | 149.75644 | 0.25754
+
+- Events.COMPLETED: ['run.<locals>.on_training_completed']
+not yet triggered
+
+2024-04-26 06:30:27,219 - ignite.engine.engine.Engine - INFO - Engine run starting with max_epochs=1.
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Drawing debug image "validation/image_50_0"
+Drawing debug image "validation/image_50_1"
+Drawing debug image "validation/image_50_2"
+Drawing debug image "validation/image_50_3"
+Evaluation: Iteration: 100
+Drawing debug image "validation/image_100_0"
+Drawing debug image "validation/image_100_1"
+Drawing debug image "validation/image_100_2"
+Drawing debug image "validation/image_100_3"
+Drawing debug image "validation/image_150_0"
+Drawing debug image "validation/image_150_1"
+Drawing debug image "validation/image_150_2"
+Drawing debug image "validation/image_150_3"
+Evaluation: Iteration: 200
+Drawing debug image "validation/image_200_0"
+Drawing debug image "validation/image_200_1"
+Drawing debug image "validation/image_200_2"
+Drawing debug image "validation/image_200_3"
+Drawing debug image "validation/image_250_0"
+Drawing debug image "validation/image_250_1"
+Drawing debug image "validation/image_250_2"
+Drawing debug image "validation/image_250_3"
+Evaluation: Iteration: 300
+Drawing debug image "validation/image_300_0"
+Drawing debug image "validation/image_300_1"
+Drawing debug image "validation/image_300_2"
+Drawing debug image "validation/image_300_3"
+Drawing debug image "validation/image_350_0"
+Drawing debug image "validation/image_350_1"
+Drawing debug image "validation/image_350_2"
+Drawing debug image "validation/image_350_3"
+Evaluation: Iteration: 400
+Drawing debug image "validation/image_400_0"
+Drawing debug image "validation/image_400_1"
+Drawing debug image "validation/image_400_2"
+Drawing debug image "validation/image_400_3"
+Drawing debug image "validation/image_450_0"
+Drawing debug image "validation/image_450_1"
+Drawing debug image "validation/image_450_2"
+Drawing debug image "validation/image_450_3"
+Evaluation: Iteration: 500
+Drawing debug image "validation/image_500_0"
+Drawing debug image "validation/image_500_1"
+Drawing debug image "validation/image_500_2"
+Drawing debug image "validation/image_500_3"
+Accumulating evaluation results...
+DONE (t=0.64s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.278
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.535
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.258
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.118
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.370
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.467
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.127
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.333
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.407
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.194
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.498
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.624
+Accumulating evaluation results...
+DONE (t=0.55s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.278
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.535
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.258
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.118
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.370
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.467
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.127
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.333
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.407
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.194
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.498
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.624
+Accumulating evaluation results...
+DONE (t=1.30s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.278
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.535
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.258
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.118
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.370
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.467
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.127
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.333
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.407
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.194
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.498
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.624
+2024-04-26 06:32:28,123 - ignite.engine.engine.Engine - INFO - Epoch[1] Complete. Time taken: 00:01:59.879
+2024-04-26 06:32:28,123 - ignite.engine.engine.Engine - INFO - Engine run complete. Time taken: 00:02:00.904
+Saving model checkpoint
+Model checkpoint from epoch 3 was saved at ./gpu6/checkpoints/model_epoch_3.pth
+2024-04-26 06:32:29,388 - ignite.engine.engine.Engine - INFO - Epoch[3] Complete. Time taken: 01:51:14.497
+Epoch: 4, Iteration: 44100, Loss: 0.16026738286018372
+Epoch: 4, Iteration: 44200, Loss: 0.436641663312912
+Epoch: 4, Iteration: 44300, Loss: 0.3563143312931061
+Epoch: 4, Iteration: 44400, Loss: 0.16494596004486084
+Epoch: 4, Iteration: 44500, Loss: 0.2549792230129242
+Epoch: 4, Iteration: 44600, Loss: 0.22376972436904907
+Epoch: 4, Iteration: 44700, Loss: 0.38453415036201477
+Epoch: 4, Iteration: 44800, Loss: 0.19247809052467346
+Epoch: 4, Iteration: 44900, Loss: 0.17787201702594757
+Epoch: 4, Iteration: 45000, Loss: 0.2748384475708008
+Epoch: 4, Iteration: 45100, Loss: 0.21243640780448914
+Epoch: 4, Iteration: 45200, Loss: 0.3592093288898468
+Epoch: 4, Iteration: 45300, Loss: 0.2962005138397217
+Epoch: 4, Iteration: 45400, Loss: 0.7036266326904297
+Epoch: 4, Iteration: 45500, Loss: 0.507274866104126
+Epoch: 4, Iteration: 45600, Loss: 0.5679731369018555
+Epoch: 4, Iteration: 45700, Loss: 0.36401864886283875
+Epoch: 4, Iteration: 45800, Loss: 0.3923020362854004
+Epoch: 4, Iteration: 45900, Loss: 0.5271395444869995
+Epoch: 4, Iteration: 46000, Loss: 0.4384148418903351
+Epoch: 4, Iteration: 46100, Loss: 0.3261980414390564
+Epoch: 4, Iteration: 46200, Loss: 0.16378964483737946
+Epoch: 4, Iteration: 46300, Loss: 0.6117916107177734
+Epoch: 4, Iteration: 46400, Loss: 0.22789184749126434
+Epoch: 4, Iteration: 46500, Loss: 0.1070747897028923
+Epoch: 4, Iteration: 46600, Loss: 0.8401709198951721
+Epoch: 4, Iteration: 46700, Loss: 0.434307336807251
+Epoch: 4, Iteration: 46800, Loss: 0.4143964946269989
+Epoch: 4, Iteration: 46900, Loss: 0.10763130336999893
+Epoch: 4, Iteration: 47000, Loss: 0.509750247001648
+Epoch: 4, Iteration: 47100, Loss: 0.21397295594215393
+Epoch: 4, Iteration: 47200, Loss: 0.23443001508712769
+Epoch: 4, Iteration: 47300, Loss: 0.55650395154953
+Epoch: 4, Iteration: 47400, Loss: 0.4015836715698242
+Epoch: 4, Iteration: 47500, Loss: 0.4060123562812805
+Epoch: 4, Iteration: 47600, Loss: 0.11263926327228546
+Epoch: 4, Iteration: 47700, Loss: 0.34490150213241577
+Epoch: 4, Iteration: 47800, Loss: 0.33416837453842163
+Epoch: 4, Iteration: 47900, Loss: 0.45044782757759094
+Epoch: 4, Iteration: 48000, Loss: 0.41854920983314514
+Epoch: 4, Iteration: 48100, Loss: 0.20812568068504333
+Epoch: 4, Iteration: 48200, Loss: 0.4366507828235626
+Epoch: 4, Iteration: 48300, Loss: 0.6038275957107544
+Epoch: 4, Iteration: 48400, Loss: 0.3056885302066803
+Epoch: 4, Iteration: 48500, Loss: 0.6854084730148315
+Epoch: 4, Iteration: 48600, Loss: 0.3292672038078308
+Epoch: 4, Iteration: 48700, Loss: 0.5774450302124023
+Epoch: 4, Iteration: 48800, Loss: 0.5390719175338745
+Epoch: 4, Iteration: 48900, Loss: 0.46504995226860046
+Epoch: 4, Iteration: 49000, Loss: 0.4712882936000824
+Epoch: 4, Iteration: 49100, Loss: 0.19926054775714874
+Epoch: 4, Iteration: 49200, Loss: 0.09866926074028015
+Epoch: 4, Iteration: 49300, Loss: 0.1525915116071701
+Epoch: 4, Iteration: 49400, Loss: 0.2983801066875458
+Epoch: 4, Iteration: 49500, Loss: 0.25849685072898865
+Epoch: 4, Iteration: 49600, Loss: 0.41496795415878296
+Epoch: 4, Iteration: 49700, Loss: 0.360113263130188
+Epoch: 4, Iteration: 49800, Loss: 0.343000590801239
+Epoch: 4, Iteration: 49900, Loss: 0.19495436549186707
+Epoch: 4, Iteration: 50000, Loss: 0.1852135956287384
+Found 1 degenerate boxes. Keeping 7 boxes.
+tensor([[420.1040, 212.0015, 439.2400, 289.3159],
+        [255.9840, 209.4176, 263.2800, 227.9118],
+        [198.3360, 206.6901, 218.7440, 277.0901],
+        [235.4640, 209.1903, 248.0240, 246.5615],
+        [215.9920, 214.4179, 232.9360, 238.5465],
+        [169.8160, 206.7020, 182.5440, 252.3992],
+        [243.4880, 210.5301, 255.0800, 251.8490]], device='cuda:0')
+Epoch: 4, Iteration: 50100, Loss: 0.5566900968551636
+Epoch: 4, Iteration: 50200, Loss: 0.39821043610572815
+Epoch: 4, Iteration: 50300, Loss: 0.49405211210250854
+Epoch: 4, Iteration: 50400, Loss: 0.1592753529548645
+Epoch: 4, Iteration: 50500, Loss: 0.4682442247867584
+Epoch: 4, Iteration: 50600, Loss: 0.4058404266834259
+Epoch: 4, Iteration: 50700, Loss: 0.5741580128669739
+Epoch: 4, Iteration: 50800, Loss: 0.44499531388282776
+Epoch: 4, Iteration: 50900, Loss: 0.6546730995178223
+Epoch: 4, Iteration: 51000, Loss: 0.586959719657898
+Epoch: 4, Iteration: 51100, Loss: 0.4290377199649811
+Epoch: 4, Iteration: 51200, Loss: 0.3328494429588318
+Epoch: 4, Iteration: 51300, Loss: 0.40128690004348755
+Epoch: 4, Iteration: 51400, Loss: 0.933001697063446
+Epoch: 4, Iteration: 51500, Loss: 0.6068472862243652
+Epoch: 4, Iteration: 51600, Loss: 0.5714279413223267
+Epoch: 4, Iteration: 51700, Loss: 0.6041609048843384
+Epoch: 4, Iteration: 51800, Loss: 0.577820360660553
+Epoch: 4, Iteration: 51900, Loss: 0.4524014890193939
+Epoch: 4, Iteration: 52000, Loss: 0.41345226764678955
+Epoch: 4, Iteration: 52100, Loss: 0.7109793424606323
+Epoch: 4, Iteration: 52200, Loss: 0.5170606374740601
+Epoch: 4, Iteration: 52300, Loss: 0.36663880944252014
+Epoch: 4, Iteration: 52400, Loss: 0.11892925947904587
+Epoch: 4, Iteration: 52500, Loss: 0.5132112503051758
+Epoch: 4, Iteration: 52600, Loss: 0.5409228801727295
+Epoch: 4, Iteration: 52700, Loss: 0.4978281557559967
+Epoch: 4, Iteration: 52800, Loss: 0.34822115302085876
+Epoch: 4, Iteration: 52900, Loss: 0.24842457473278046
+Epoch: 4, Iteration: 53000, Loss: 0.7640597820281982
+Epoch: 4, Iteration: 53100, Loss: 0.39672771096229553
+Epoch: 4, Iteration: 53200, Loss: 0.37095907330513
+Epoch: 4, Iteration: 53300, Loss: 0.7623788118362427
+Epoch: 4, Iteration: 53400, Loss: 0.3211718201637268
+Epoch: 4, Iteration: 53500, Loss: 0.36680009961128235
+Epoch: 4, Iteration: 53600, Loss: 0.6508898735046387
+Epoch: 4, Iteration: 53700, Loss: 0.4641796946525574
+Epoch: 4, Iteration: 53800, Loss: 0.24258767068386078
+Epoch: 4, Iteration: 53900, Loss: 0.355703741312027
+Epoch: 4, Iteration: 54000, Loss: 0.36259761452674866
+Epoch: 4, Iteration: 54100, Loss: 0.09273815155029297
+Epoch: 4, Iteration: 54200, Loss: 0.36475852131843567
+Epoch: 4, Iteration: 54300, Loss: 0.32487109303474426
+Epoch: 4, Iteration: 54400, Loss: 0.6623233556747437
+Epoch: 4, Iteration: 54500, Loss: 0.3688868582248688
+Epoch: 4, Iteration: 54600, Loss: 0.32965612411499023
+Epoch: 4, Iteration: 54700, Loss: 0.8720344305038452
+Epoch: 4, Iteration: 54800, Loss: 0.5938699841499329
+Epoch: 4, Iteration: 54900, Loss: 0.2900838851928711
+Epoch: 4, Iteration: 55000, Loss: 0.404941588640213
+Epoch: 4, Iteration: 55100, Loss: 0.16554242372512817
+Epoch: 4, Iteration: 55200, Loss: 0.15708230435848236
+Epoch: 4, Iteration: 55300, Loss: 0.42762935161590576
+Epoch: 4, Iteration: 55400, Loss: 0.16782920062541962
+Epoch: 4, Iteration: 55500, Loss: 0.5379281044006348
+Epoch: 4, Iteration: 55600, Loss: 0.27409130334854126
+Epoch: 4, Iteration: 55700, Loss: 0.35102641582489014
+Epoch: 4, Iteration: 55800, Loss: 0.42147383093833923
+Epoch: 4, Iteration: 55900, Loss: 0.10232026875019073
+Epoch: 4, Iteration: 56000, Loss: 0.261381596326828
+Epoch: 4, Iteration: 56100, Loss: 0.5645073056221008
+Epoch: 4, Iteration: 56200, Loss: 0.5120612978935242
+Epoch: 4, Iteration: 56300, Loss: 0.3398737609386444
+Epoch: 4, Iteration: 56400, Loss: 0.3422729969024658
+Epoch: 4, Iteration: 56500, Loss: 0.435447633266449
+Epoch: 4, Iteration: 56600, Loss: 0.2767263650894165
+Epoch: 4, Iteration: 56700, Loss: 0.8396459221839905
+Epoch: 4, Iteration: 56800, Loss: 0.19362042844295502
+Epoch: 4, Iteration: 56900, Loss: 0.5767948627471924
+Epoch: 4, Iteration: 57000, Loss: 0.14499065279960632
+Epoch: 4, Iteration: 57100, Loss: 0.14230535924434662
+Epoch: 4, Iteration: 57200, Loss: 0.4758756160736084
+Epoch: 4, Iteration: 57300, Loss: 0.17696699500083923
+Epoch: 4, Iteration: 57400, Loss: 0.26972696185112
+Epoch: 4, Iteration: 57500, Loss: 0.23455773293972015
+Epoch: 4, Iteration: 57600, Loss: 0.35661083459854126
+Epoch: 4, Iteration: 57700, Loss: 0.4067011773586273
+Epoch: 4, Iteration: 57800, Loss: 0.40590569376945496
+Epoch: 4, Iteration: 57900, Loss: 0.41437095403671265
+Epoch: 4, Iteration: 58000, Loss: 0.3379265367984772
+Epoch: 4, Iteration: 58100, Loss: 0.44106316566467285
+Epoch: 4, Iteration: 58200, Loss: 0.17853575944900513
+Epoch: 4, Iteration: 58300, Loss: 0.1694595068693161
+Epoch: 4, Iteration: 58400, Loss: 0.26998844742774963
+Epoch: 4, Iteration: 58500, Loss: 0.5954969525337219
+Epoch: 4, Iteration: 58600, Loss: 0.3568830192089081
+
+ ----------------------------------------------------
+| Time profiling stats (in seconds):                 |
+ ----------------------------------------------------
+total  |  min/index  |  max/index  |  mean  |  std
+
+Processing function:
+27468.19922 | 0.26821/44003 | 135.03888/0 | 0.46817 | 0.57238
+
+Dataflow:
+162.84157 | 0.00009/48514 | 2.10876/14667 | 0.00278 | 0.01643
+
+Event handlers:
+3091.30469
+
+- Events.STARTED: ['run.<locals>.on_training_started']
+0.00167
+
+- Events.EPOCH_STARTED: ['run.<locals>.on_epoch_started']
+0.00582 | 0.00125/0 | 0.00156/1 | 0.00145 | 0.00014
+
+- Events.ITERATION_STARTED: []
+0.30844 | 0.00000/7481 | 0.04658/575 | 0.00001 | 0.00026
+
+- Events.ITERATION_COMPLETED: ['Engine._handler_wrapper.<locals>.wrapper', 'run.<locals>.on_iteration_completed']
+2667.56714 | 0.00021/7938 | 32.50097/1999 | 0.04547 | 0.69448
+
+- Events.EPOCH_COMPLETED: ['run.<locals>.log_intermediate_results', 'run.<locals>.on_epoch_completed']
+422.70410 | 123.19122/2 | 149.93854/0 | 140.90137 | 15.33851
+
+- Events.COMPLETED: ['run.<locals>.on_training_completed']
+not yet triggered
+
+2024-04-26 08:17:30,245 - ignite.engine.engine.Engine - INFO - Engine run starting with max_epochs=1.
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Drawing debug image "validation/image_50_0"
+Drawing debug image "validation/image_50_1"
+Drawing debug image "validation/image_50_2"
+Drawing debug image "validation/image_50_3"
+Evaluation: Iteration: 100
+Drawing debug image "validation/image_100_0"
+Drawing debug image "validation/image_100_1"
+Drawing debug image "validation/image_100_2"
+Drawing debug image "validation/image_100_3"
+Drawing debug image "validation/image_150_0"
+Drawing debug image "validation/image_150_1"
+Drawing debug image "validation/image_150_2"
+Drawing debug image "validation/image_150_3"
+Evaluation: Iteration: 200
+Drawing debug image "validation/image_200_0"
+Drawing debug image "validation/image_200_1"
+Drawing debug image "validation/image_200_2"
+Drawing debug image "validation/image_200_3"
+Drawing debug image "validation/image_250_0"
+Drawing debug image "validation/image_250_1"
+Drawing debug image "validation/image_250_2"
+Drawing debug image "validation/image_250_3"
+Evaluation: Iteration: 300
+Drawing debug image "validation/image_300_0"
+Drawing debug image "validation/image_300_1"
+Drawing debug image "validation/image_300_2"
+Drawing debug image "validation/image_300_3"
+Drawing debug image "validation/image_350_0"
+Drawing debug image "validation/image_350_1"
+Drawing debug image "validation/image_350_2"
+Drawing debug image "validation/image_350_3"
+Evaluation: Iteration: 400
+Drawing debug image "validation/image_400_0"
+Drawing debug image "validation/image_400_1"
+Drawing debug image "validation/image_400_2"
+Drawing debug image "validation/image_400_3"
+Drawing debug image "validation/image_450_0"
+Drawing debug image "validation/image_450_1"
+Drawing debug image "validation/image_450_2"
+Drawing debug image "validation/image_450_3"
+Evaluation: Iteration: 500
+Drawing debug image "validation/image_500_0"
+Drawing debug image "validation/image_500_1"
+Drawing debug image "validation/image_500_2"
+Drawing debug image "validation/image_500_3"
+Accumulating evaluation results...
+DONE (t=0.57s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.353
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.638
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.341
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.163
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.427
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.564
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.149
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.389
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.466
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.273
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.540
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.675
+Accumulating evaluation results...
+DONE (t=0.54s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.353
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.638
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.341
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.163
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.427
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.564
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.149
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.389
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.466
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.273
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.540
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.675
+Accumulating evaluation results...
+DONE (t=0.50s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.353
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.638
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.341
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.163
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.427
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.564
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.149
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.389
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.466
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.273
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.540
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.675
+2024-04-26 08:19:31,358 - ignite.engine.engine.Engine - INFO - Epoch[1] Complete. Time taken: 00:01:59.783
+2024-04-26 08:19:31,358 - ignite.engine.engine.Engine - INFO - Engine run complete. Time taken: 00:02:01.113
+Saving model checkpoint
+Model checkpoint from epoch 4 was saved at ./gpu6/checkpoints/model_epoch_4.pth
+2024-04-26 08:19:32,765 - ignite.engine.engine.Engine - INFO - Epoch[4] Complete. Time taken: 01:47:03.377
+Epoch: 5, Iteration: 58700, Loss: 0.23595896363258362
+Epoch: 5, Iteration: 58800, Loss: 0.41720062494277954
+Epoch: 5, Iteration: 58900, Loss: 0.8621170520782471
+Epoch: 5, Iteration: 59000, Loss: 0.4631315767765045
+Epoch: 5, Iteration: 59100, Loss: 0.6031017303466797
+Epoch: 5, Iteration: 59200, Loss: 0.31179332733154297
+Epoch: 5, Iteration: 59300, Loss: 0.32861608266830444
+Epoch: 5, Iteration: 59400, Loss: 0.495342493057251
+Epoch: 5, Iteration: 59500, Loss: 0.3868098258972168
+Epoch: 5, Iteration: 59600, Loss: 0.26290419697761536
+Epoch: 5, Iteration: 59700, Loss: 0.5449631214141846
+Epoch: 5, Iteration: 59800, Loss: 0.45896589756011963
+Epoch: 5, Iteration: 59900, Loss: 0.11962714791297913
+Epoch: 5, Iteration: 60000, Loss: 0.42438945174217224
+Epoch: 5, Iteration: 60100, Loss: 0.13588018715381622
+Epoch: 5, Iteration: 60200, Loss: 0.21157893538475037
+Epoch: 5, Iteration: 60300, Loss: 0.3001348078250885
+Epoch: 5, Iteration: 60400, Loss: 0.32497161626815796
+Epoch: 5, Iteration: 60500, Loss: 0.3111840784549713
+Epoch: 5, Iteration: 60600, Loss: 0.4836122393608093
+Epoch: 5, Iteration: 60700, Loss: 0.845058262348175
+Epoch: 5, Iteration: 60800, Loss: 0.08184557408094406
+Epoch: 5, Iteration: 60900, Loss: 0.851391077041626
+Epoch: 5, Iteration: 61000, Loss: 0.6906676888465881
+Epoch: 5, Iteration: 61100, Loss: 0.2999519109725952
+Epoch: 5, Iteration: 61200, Loss: 0.19354736804962158
+Epoch: 5, Iteration: 61300, Loss: 0.5544524788856506
+Epoch: 5, Iteration: 61400, Loss: 0.4605668783187866
+Epoch: 5, Iteration: 61500, Loss: 0.4532870650291443
+Epoch: 5, Iteration: 61600, Loss: 0.13357213139533997
+Epoch: 5, Iteration: 61700, Loss: 0.6208854913711548
+Epoch: 5, Iteration: 61800, Loss: 0.20563912391662598
+Epoch: 5, Iteration: 61900, Loss: 0.34596171975135803
+Epoch: 5, Iteration: 62000, Loss: 0.7079077363014221
+Epoch: 5, Iteration: 62100, Loss: 0.5682796835899353
+Epoch: 5, Iteration: 62200, Loss: 0.2868466377258301
+Epoch: 5, Iteration: 62300, Loss: 0.18429896235466003
+Epoch: 5, Iteration: 62400, Loss: 0.3360899090766907
+Epoch: 5, Iteration: 62500, Loss: 0.5008361339569092
+Epoch: 5, Iteration: 62600, Loss: 0.34514734148979187
+Epoch: 5, Iteration: 62700, Loss: 0.49635857343673706
+Epoch: 5, Iteration: 62800, Loss: 0.640116274356842
+Epoch: 5, Iteration: 62900, Loss: 0.39478975534439087
+Epoch: 5, Iteration: 63000, Loss: 0.18437494337558746
+Epoch: 5, Iteration: 63100, Loss: 0.27769988775253296
+Epoch: 5, Iteration: 63200, Loss: 0.5406310558319092
+Epoch: 5, Iteration: 63300, Loss: 0.15349307656288147
+Epoch: 5, Iteration: 63400, Loss: 0.25518694519996643
+Epoch: 5, Iteration: 63500, Loss: 0.4420209527015686
+Epoch: 5, Iteration: 63600, Loss: 0.5076906681060791
+Epoch: 5, Iteration: 63700, Loss: 0.5657432079315186
+Epoch: 5, Iteration: 63800, Loss: 0.5644454956054688
+Epoch: 5, Iteration: 63900, Loss: 0.2438914030790329
+Epoch: 5, Iteration: 64000, Loss: 0.4367908537387848
+Epoch: 5, Iteration: 64100, Loss: 0.302357941865921
+Epoch: 5, Iteration: 64200, Loss: 0.5698055624961853
+Epoch: 5, Iteration: 64300, Loss: 0.43847528100013733
+Epoch: 5, Iteration: 64400, Loss: 0.6156553626060486
+Epoch: 5, Iteration: 64500, Loss: 0.7993053197860718
+Epoch: 5, Iteration: 64600, Loss: 0.46234244108200073
+Epoch: 5, Iteration: 64700, Loss: 0.572858989238739
+Epoch: 5, Iteration: 64800, Loss: 0.3503415584564209
+Epoch: 5, Iteration: 64900, Loss: 0.15232162177562714
+Epoch: 5, Iteration: 65000, Loss: 0.17722156643867493
+Epoch: 5, Iteration: 65100, Loss: 0.19789046049118042
+Epoch: 5, Iteration: 65200, Loss: 0.060801874846220016
+Epoch: 5, Iteration: 65300, Loss: 0.4739675521850586
+Epoch: 5, Iteration: 65400, Loss: 0.5983328819274902
+Epoch: 5, Iteration: 65500, Loss: 0.36765727400779724
+Epoch: 5, Iteration: 65600, Loss: 0.352560430765152
+Epoch: 5, Iteration: 65700, Loss: 0.6111169457435608
+Epoch: 5, Iteration: 65800, Loss: 0.8673084378242493
+Epoch: 5, Iteration: 65900, Loss: 0.5719491839408875
+Epoch: 5, Iteration: 66000, Loss: 0.2806149125099182
+Epoch: 5, Iteration: 66100, Loss: 0.20816312730312347
+Epoch: 5, Iteration: 66200, Loss: 0.4249298572540283
+Epoch: 5, Iteration: 66300, Loss: 0.8687935471534729
+Epoch: 5, Iteration: 66400, Loss: 0.2574442923069
+Epoch: 5, Iteration: 66500, Loss: 0.21289615333080292
+Epoch: 5, Iteration: 66600, Loss: 0.4151286482810974
+Epoch: 5, Iteration: 66700, Loss: 0.5380294322967529
+Epoch: 5, Iteration: 66800, Loss: 0.3164539635181427
+Epoch: 5, Iteration: 66900, Loss: 0.3770560920238495
+Epoch: 5, Iteration: 67000, Loss: 0.29215964674949646
+Epoch: 5, Iteration: 67100, Loss: 0.41467487812042236
+Epoch: 5, Iteration: 67200, Loss: 0.600118100643158
+Epoch: 5, Iteration: 67300, Loss: 1.0712026357650757
+Epoch: 5, Iteration: 67400, Loss: 0.46256834268569946
+Epoch: 5, Iteration: 67500, Loss: 0.3909223675727844
+Epoch: 5, Iteration: 67600, Loss: 0.6578180193901062
+Epoch: 5, Iteration: 67700, Loss: 0.5136675834655762
+Epoch: 5, Iteration: 67800, Loss: 0.3940364718437195
+Epoch: 5, Iteration: 67900, Loss: 0.22055289149284363
+Epoch: 5, Iteration: 68000, Loss: 0.2020319551229477
+Epoch: 5, Iteration: 68100, Loss: 0.23567253351211548
+Epoch: 5, Iteration: 68200, Loss: 0.3072756826877594
+Epoch: 5, Iteration: 68300, Loss: 0.11295907199382782
+Epoch: 5, Iteration: 68400, Loss: 0.2647530734539032
+Epoch: 5, Iteration: 68500, Loss: 0.27191388607025146
+Epoch: 5, Iteration: 68600, Loss: 0.17647217214107513
+Epoch: 5, Iteration: 68700, Loss: 0.4456784427165985
+Epoch: 5, Iteration: 68800, Loss: 0.5196391940116882
+Epoch: 5, Iteration: 68900, Loss: 0.40478527545928955
+Epoch: 5, Iteration: 69000, Loss: 0.10891681164503098
+Epoch: 5, Iteration: 69100, Loss: 0.2555040121078491
+Epoch: 5, Iteration: 69200, Loss: 0.5035498142242432
+Epoch: 5, Iteration: 69300, Loss: 0.30973923206329346
+Epoch: 5, Iteration: 69400, Loss: 0.45768606662750244
+Epoch: 5, Iteration: 69500, Loss: 0.3597255349159241
+Epoch: 5, Iteration: 69600, Loss: 0.3280962407588959
+Epoch: 5, Iteration: 69700, Loss: 0.5661184787750244
+Epoch: 5, Iteration: 69800, Loss: 0.3697550296783447
+Epoch: 5, Iteration: 69900, Loss: 0.6759438514709473
+Epoch: 5, Iteration: 70000, Loss: 0.2771908640861511
+Epoch: 5, Iteration: 70100, Loss: 0.6473294496536255
+Epoch: 5, Iteration: 70200, Loss: 0.12048814445734024
+Epoch: 5, Iteration: 70300, Loss: 0.16336491703987122
+Epoch: 5, Iteration: 70400, Loss: 0.12504959106445312
+Epoch: 5, Iteration: 70500, Loss: 0.5138434767723083
+Epoch: 5, Iteration: 70600, Loss: 0.29568901658058167
+Epoch: 5, Iteration: 70700, Loss: 0.4271107316017151
+Epoch: 5, Iteration: 70800, Loss: 0.3463182747364044
+Epoch: 5, Iteration: 70900, Loss: 0.4728747010231018
+Epoch: 5, Iteration: 71000, Loss: 0.41573530435562134
+Epoch: 5, Iteration: 71100, Loss: 0.4167383313179016
+Epoch: 5, Iteration: 71200, Loss: 0.32601693272590637
+Found 1 degenerate boxes. Keeping 7 boxes.
+tensor([[ 72.7600, 212.0015,  91.8960, 289.3159],
+        [248.7200, 209.4176, 256.0160, 227.9118],
+        [293.2560, 206.6901, 313.6640, 277.0901],
+        [263.9760, 209.1903, 276.5360, 246.5615],
+        [279.0640, 214.4179, 296.0080, 238.5465],
+        [329.4560, 206.7020, 342.1840, 252.3992],
+        [256.9200, 210.5301, 268.5120, 251.8490]], device='cuda:0')
+Epoch: 5, Iteration: 71300, Loss: 0.3261445164680481
+Epoch: 5, Iteration: 71400, Loss: 0.24710728228092194
+Epoch: 5, Iteration: 71500, Loss: 0.4673098623752594
+Epoch: 5, Iteration: 71600, Loss: 0.7914988398551941
+Epoch: 5, Iteration: 71700, Loss: 0.3733309507369995
+Epoch: 5, Iteration: 71800, Loss: 0.38564378023147583
+Epoch: 5, Iteration: 71900, Loss: 0.18603843450546265
+Epoch: 5, Iteration: 72000, Loss: 0.4630793333053589
+Epoch: 5, Iteration: 72100, Loss: 0.4109026789665222
+Epoch: 5, Iteration: 72200, Loss: 0.5697562098503113
+Epoch: 5, Iteration: 72300, Loss: 0.5099123120307922
+Epoch: 5, Iteration: 72400, Loss: 0.36841198801994324
+Epoch: 5, Iteration: 72500, Loss: 0.3471711277961731
+Epoch: 5, Iteration: 72600, Loss: 0.2541830241680145
+Epoch: 5, Iteration: 72700, Loss: 0.43077489733695984
+Epoch: 5, Iteration: 72800, Loss: 0.4067632257938385
+Epoch: 5, Iteration: 72900, Loss: 0.6619048118591309
+Epoch: 5, Iteration: 73000, Loss: 0.3581016957759857
+Epoch: 5, Iteration: 73100, Loss: 0.12623994052410126
+Epoch: 5, Iteration: 73200, Loss: 0.2823830544948578
+Epoch: 5, Iteration: 73300, Loss: 0.39590370655059814
+
+ ----------------------------------------------------
+| Time profiling stats (in seconds):                 |
+ ----------------------------------------------------
+total  |  min/index  |  max/index  |  mean  |  std
+
+Processing function:
+33244.78125 | 0.26821/44003 | 135.03888/0 | 0.45330 | 0.51324
+
+Dataflow:
+186.38614 | 0.00009/71094 | 2.17404/58671 | 0.00254 | 0.01715
+
+Event handlers:
+3721.62549
+
+- Events.STARTED: ['run.<locals>.on_training_started']
+0.00167
+
+- Events.EPOCH_STARTED: ['run.<locals>.on_epoch_started']
+0.00737 | 0.00125/0 | 0.00156/1 | 0.00147 | 0.00013
+
+- Events.ITERATION_STARTED: []
+0.36341 | 0.00000/7481 | 0.04658/575 | 0.00000 | 0.00023
+
+- Events.ITERATION_COMPLETED: ['Engine._handler_wrapper.<locals>.wrapper', 'run.<locals>.on_iteration_completed']
+3174.09717 | 0.00021/7938 | 32.50097/1999 | 0.04328 | 0.65874
+
+- Events.EPOCH_COMPLETED: ['run.<locals>.log_intermediate_results', 'run.<locals>.on_epoch_completed']
+546.29303 | 123.19122/2 | 149.93854/0 | 136.57326 | 15.22422
+
+- Events.COMPLETED: ['run.<locals>.on_training_completed']
+not yet triggered
+
+2024-04-26 10:04:51,271 - ignite.engine.engine.Engine - INFO - Engine run starting with max_epochs=1.
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Drawing debug image "validation/image_50_0"
+Drawing debug image "validation/image_50_1"
+Drawing debug image "validation/image_50_2"
+Drawing debug image "validation/image_50_3"
+Evaluation: Iteration: 100
+Drawing debug image "validation/image_100_0"
+Drawing debug image "validation/image_100_1"
+Drawing debug image "validation/image_100_2"
+Drawing debug image "validation/image_100_3"
+Drawing debug image "validation/image_150_0"
+Drawing debug image "validation/image_150_1"
+Drawing debug image "validation/image_150_2"
+Drawing debug image "validation/image_150_3"
+Evaluation: Iteration: 200
+Drawing debug image "validation/image_200_0"
+Drawing debug image "validation/image_200_1"
+Drawing debug image "validation/image_200_2"
+Drawing debug image "validation/image_200_3"
+Drawing debug image "validation/image_250_0"
+Drawing debug image "validation/image_250_1"
+Drawing debug image "validation/image_250_2"
+Drawing debug image "validation/image_250_3"
+Evaluation: Iteration: 300
+Drawing debug image "validation/image_300_0"
+Drawing debug image "validation/image_300_1"
+Drawing debug image "validation/image_300_2"
+Drawing debug image "validation/image_300_3"
+Drawing debug image "validation/image_350_0"
+Drawing debug image "validation/image_350_1"
+Drawing debug image "validation/image_350_2"
+Drawing debug image "validation/image_350_3"
+Evaluation: Iteration: 400
+Drawing debug image "validation/image_400_0"
+Drawing debug image "validation/image_400_1"
+Drawing debug image "validation/image_400_2"
+Drawing debug image "validation/image_400_3"
+Drawing debug image "validation/image_450_0"
+Drawing debug image "validation/image_450_1"
+Drawing debug image "validation/image_450_2"
+Drawing debug image "validation/image_450_3"
+Evaluation: Iteration: 500
+Drawing debug image "validation/image_500_0"
+Drawing debug image "validation/image_500_1"
+Drawing debug image "validation/image_500_2"
+Drawing debug image "validation/image_500_3"
+Accumulating evaluation results...
+DONE (t=0.60s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.355
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.643
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.343
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.165
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.430
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.563
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.148
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.392
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.472
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.277
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.548
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.679
+Accumulating evaluation results...
+DONE (t=0.50s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.355
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.643
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.343
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.165
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.430
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.563
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.148
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.392
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.472
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.277
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.548
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.679
+Accumulating evaluation results...
+DONE (t=0.49s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.355
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.643
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.343
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.165
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.430
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.563
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.148
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.392
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.472
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.277
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.548
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.679
+2024-04-26 10:06:52,940 - ignite.engine.engine.Engine - INFO - Epoch[1] Complete. Time taken: 00:02:00.305
+2024-04-26 10:06:52,941 - ignite.engine.engine.Engine - INFO - Engine run complete. Time taken: 00:02:01.669
+Saving model checkpoint
+Model checkpoint from epoch 5 was saved at ./gpu6/checkpoints/model_epoch_5.pth
+2024-04-26 10:06:54,345 - ignite.engine.engine.Engine - INFO - Epoch[5] Complete. Time taken: 01:47:21.580
+Epoch: 6, Iteration: 73400, Loss: 0.6631726622581482
+Epoch: 6, Iteration: 73500, Loss: 0.20396538078784943
+Epoch: 6, Iteration: 73600, Loss: 0.22792886197566986
+Epoch: 6, Iteration: 73700, Loss: 0.28654566407203674
+Epoch: 6, Iteration: 73800, Loss: 0.28661298751831055
+Epoch: 6, Iteration: 73900, Loss: 0.1877417415380478
+Epoch: 6, Iteration: 74000, Loss: 0.4685232937335968
+Epoch: 6, Iteration: 74100, Loss: 0.3862343430519104
+Epoch: 6, Iteration: 74200, Loss: 0.32059338688850403
+Epoch: 6, Iteration: 74300, Loss: 0.1745205521583557
+Epoch: 6, Iteration: 74400, Loss: 0.28266286849975586
+Epoch: 6, Iteration: 74500, Loss: 0.4241692125797272
+Epoch: 6, Iteration: 74600, Loss: 0.6042931079864502
+Epoch: 6, Iteration: 74700, Loss: 0.2647780179977417
+Epoch: 6, Iteration: 74800, Loss: 0.2568804621696472
+Epoch: 6, Iteration: 74900, Loss: 0.09395097941160202
+Epoch: 6, Iteration: 75000, Loss: 0.22086618840694427
+Epoch: 6, Iteration: 75100, Loss: 0.4407431185245514
+Epoch: 6, Iteration: 75200, Loss: 0.44138529896736145
+Epoch: 6, Iteration: 75300, Loss: 0.35268542170524597
+Epoch: 6, Iteration: 75400, Loss: 0.1026000902056694
+Epoch: 6, Iteration: 75500, Loss: 0.45530158281326294
+Epoch: 6, Iteration: 75600, Loss: 0.25251802802085876
+Epoch: 6, Iteration: 75700, Loss: 0.2828764319419861
+Epoch: 6, Iteration: 75800, Loss: 0.4075770378112793
+Epoch: 6, Iteration: 75900, Loss: 0.4357011318206787
+Epoch: 6, Iteration: 76000, Loss: 0.3330143988132477
+Epoch: 6, Iteration: 76100, Loss: 0.3110816478729248
+Epoch: 6, Iteration: 76200, Loss: 0.4796462059020996
+Epoch: 6, Iteration: 76300, Loss: 0.46501386165618896
+Epoch: 6, Iteration: 76400, Loss: 0.1777091771364212
+Epoch: 6, Iteration: 76500, Loss: 0.09090593457221985
+Epoch: 6, Iteration: 76600, Loss: 0.5040886402130127
+Epoch: 6, Iteration: 76700, Loss: 0.530256986618042
+Epoch: 6, Iteration: 76800, Loss: 0.23587767779827118
+Found 1 degenerate boxes. Keeping 7 boxes.
+tensor([[420.1040, 212.0015, 439.2400, 289.3159],
+        [255.9840, 209.4176, 263.2800, 227.9118],
+        [198.3360, 206.6901, 218.7440, 277.0901],
+        [235.4640, 209.1903, 248.0240, 246.5615],
+        [215.9920, 214.4179, 232.9360, 238.5465],
+        [169.8160, 206.7020, 182.5440, 252.3992],
+        [243.4880, 210.5301, 255.0800, 251.8490]], device='cuda:0')
+Epoch: 6, Iteration: 76900, Loss: 0.40714216232299805
+Epoch: 6, Iteration: 77000, Loss: 1.1801626682281494
+Epoch: 6, Iteration: 77100, Loss: 0.3978700339794159
+Epoch: 6, Iteration: 77200, Loss: 0.4215411841869354
+Epoch: 6, Iteration: 77300, Loss: 0.658240795135498
+Epoch: 6, Iteration: 77400, Loss: 0.2264213114976883
+Epoch: 6, Iteration: 77500, Loss: 0.3235960304737091
+Epoch: 6, Iteration: 77600, Loss: 0.07544390857219696
+Epoch: 6, Iteration: 77700, Loss: 0.5383315682411194
+Epoch: 6, Iteration: 77800, Loss: 0.27059224247932434
+Epoch: 6, Iteration: 77900, Loss: 0.14867521822452545
+Epoch: 6, Iteration: 78000, Loss: 0.40888509154319763
+Epoch: 6, Iteration: 78100, Loss: 0.2826981842517853
+Epoch: 6, Iteration: 78200, Loss: 0.43811213970184326
+Epoch: 6, Iteration: 78300, Loss: 0.31191402673721313
+Epoch: 6, Iteration: 78400, Loss: 0.1485862284898758
+Epoch: 6, Iteration: 78500, Loss: 0.20861603319644928
+Epoch: 6, Iteration: 78600, Loss: 0.28108569979667664
+Epoch: 6, Iteration: 78700, Loss: 0.20563563704490662
+Epoch: 6, Iteration: 78800, Loss: 0.4180115759372711
+Epoch: 6, Iteration: 78900, Loss: 0.35911521315574646
+Epoch: 6, Iteration: 79000, Loss: 0.33744025230407715
+Epoch: 6, Iteration: 79100, Loss: 0.15771788358688354
+Epoch: 6, Iteration: 79200, Loss: 0.30438560247421265
+Epoch: 6, Iteration: 79300, Loss: 0.13278566300868988
+Epoch: 6, Iteration: 79400, Loss: 0.17581495642662048
+Epoch: 6, Iteration: 79500, Loss: 0.2468225359916687
+Epoch: 6, Iteration: 79600, Loss: 0.399569571018219
+Epoch: 6, Iteration: 79700, Loss: 0.35812485218048096
+Epoch: 6, Iteration: 79800, Loss: 0.512454628944397
+Epoch: 6, Iteration: 79900, Loss: 0.16679872572422028
+Epoch: 6, Iteration: 80000, Loss: 0.1917942315340042
+Epoch: 6, Iteration: 80100, Loss: 0.2713334560394287
+Epoch: 6, Iteration: 80200, Loss: 0.23301446437835693
+Epoch: 6, Iteration: 80300, Loss: 0.39642035961151123
+Epoch: 6, Iteration: 80400, Loss: 0.1123897060751915
+Epoch: 6, Iteration: 80500, Loss: 0.5319849848747253
+Epoch: 6, Iteration: 80600, Loss: 0.5147677659988403
+Epoch: 6, Iteration: 80700, Loss: 0.3066021800041199
+Epoch: 6, Iteration: 80800, Loss: 0.23373885452747345
+Epoch: 6, Iteration: 80900, Loss: 0.5204219818115234
+Epoch: 6, Iteration: 81000, Loss: 0.4011058211326599
+Epoch: 6, Iteration: 81100, Loss: 0.12036679685115814
+Epoch: 6, Iteration: 81200, Loss: 0.39884835481643677
+Epoch: 6, Iteration: 81300, Loss: 0.40124011039733887
+Epoch: 6, Iteration: 81400, Loss: 0.5016041398048401
+Epoch: 6, Iteration: 81500, Loss: 0.19921369850635529
+Epoch: 6, Iteration: 81600, Loss: 0.20825506746768951
+Epoch: 6, Iteration: 81700, Loss: 0.28420865535736084
+Epoch: 6, Iteration: 81800, Loss: 0.3982739746570587
+Epoch: 6, Iteration: 81900, Loss: 0.5092374682426453
+Epoch: 6, Iteration: 82000, Loss: 0.6679643988609314
+Epoch: 6, Iteration: 82100, Loss: 0.3944145739078522
+Epoch: 6, Iteration: 82200, Loss: 0.872682511806488
+Epoch: 6, Iteration: 82300, Loss: 0.17122992873191833
+Epoch: 6, Iteration: 82400, Loss: 0.2791343629360199
+Epoch: 6, Iteration: 82500, Loss: 0.10149087011814117
+Epoch: 6, Iteration: 82600, Loss: 0.157871276140213
+Epoch: 6, Iteration: 82700, Loss: 0.26577746868133545
+Epoch: 6, Iteration: 82800, Loss: 0.19221580028533936
+Epoch: 6, Iteration: 82900, Loss: 0.3063644766807556
+Epoch: 6, Iteration: 83000, Loss: 0.07899782061576843
+Epoch: 6, Iteration: 83100, Loss: 0.33462467789649963
+Epoch: 6, Iteration: 83200, Loss: 0.5396712422370911
+Epoch: 6, Iteration: 83300, Loss: 0.3319989740848541
+Epoch: 6, Iteration: 83400, Loss: 0.6114261746406555
+Epoch: 6, Iteration: 83500, Loss: 0.4000282883644104
+Epoch: 6, Iteration: 83600, Loss: 0.5831138491630554
+Epoch: 6, Iteration: 83700, Loss: 0.3065568208694458
+Epoch: 6, Iteration: 83800, Loss: 0.27521461248397827
+Epoch: 6, Iteration: 83900, Loss: 0.13646437227725983
+Epoch: 6, Iteration: 84000, Loss: 0.29503917694091797
+Epoch: 6, Iteration: 84100, Loss: 0.30011647939682007
+Epoch: 6, Iteration: 84200, Loss: 0.4837867021560669
+Epoch: 6, Iteration: 84300, Loss: 0.10924779623746872
+Epoch: 6, Iteration: 84400, Loss: 0.665461540222168
+Epoch: 6, Iteration: 84500, Loss: 0.2930580973625183
+Epoch: 6, Iteration: 84600, Loss: 0.4728976786136627
+Epoch: 6, Iteration: 84700, Loss: 0.4505644142627716
+Epoch: 6, Iteration: 84800, Loss: 0.4933737814426422
+Epoch: 6, Iteration: 84900, Loss: 0.7737707495689392
+Epoch: 6, Iteration: 85000, Loss: 0.41351228952407837
+Epoch: 6, Iteration: 85100, Loss: 0.5215405821800232
+Epoch: 6, Iteration: 85200, Loss: 0.43348219990730286
+Epoch: 6, Iteration: 85300, Loss: 0.28469526767730713
+Epoch: 6, Iteration: 85400, Loss: 0.40716230869293213
+Epoch: 6, Iteration: 85500, Loss: 0.4485028386116028
+Epoch: 6, Iteration: 85600, Loss: 0.15508343279361725
+Epoch: 6, Iteration: 85700, Loss: 0.5742443799972534
+Epoch: 6, Iteration: 85800, Loss: 0.5452095866203308
+Epoch: 6, Iteration: 85900, Loss: 0.31686046719551086
+Epoch: 6, Iteration: 86000, Loss: 0.30154895782470703
+Epoch: 6, Iteration: 86100, Loss: 0.43350738286972046
+Epoch: 6, Iteration: 86200, Loss: 0.5076806545257568
+Epoch: 6, Iteration: 86300, Loss: 0.6158124208450317
+Epoch: 6, Iteration: 86400, Loss: 0.18140603601932526
+Epoch: 6, Iteration: 86500, Loss: 0.6041046977043152
+Epoch: 6, Iteration: 86600, Loss: 0.7022665143013
+Epoch: 6, Iteration: 86700, Loss: 0.15326088666915894
+Epoch: 6, Iteration: 86800, Loss: 0.308430552482605
+Epoch: 6, Iteration: 86900, Loss: 0.3918588161468506
+Epoch: 6, Iteration: 87000, Loss: 0.12623077630996704
+Epoch: 6, Iteration: 87100, Loss: 0.46018701791763306
+Epoch: 6, Iteration: 87200, Loss: 0.7017489671707153
+Epoch: 6, Iteration: 87300, Loss: 0.38059598207473755
+Epoch: 6, Iteration: 87400, Loss: 0.5527348518371582
+Epoch: 6, Iteration: 87500, Loss: 0.8316463232040405
+Epoch: 6, Iteration: 87600, Loss: 0.4858492612838745
+Epoch: 6, Iteration: 87700, Loss: 0.13301941752433777
+Epoch: 6, Iteration: 87800, Loss: 0.5042126774787903
+Epoch: 6, Iteration: 87900, Loss: 0.452197790145874
+Epoch: 6, Iteration: 88000, Loss: 0.5231708884239197
+
+ ----------------------------------------------------
+| Time profiling stats (in seconds):                 |
+ ----------------------------------------------------
+total  |  min/index  |  max/index  |  mean  |  std
+
+Processing function:
+39153.21875 | 0.26821/44003 | 135.03888/0 | 0.44488 | 0.46936
+
+Dataflow:
+206.71777 | 0.00009/71094 | 2.17404/58671 | 0.00235 | 0.01673
+
+Event handlers:
+4366.88477
+
+- Events.STARTED: ['run.<locals>.on_training_started']
+0.00167
+
+- Events.EPOCH_STARTED: ['run.<locals>.on_epoch_started']
+0.00908 | 0.00125/0 | 0.00171/5 | 0.00151 | 0.00015
+
+- Events.ITERATION_STARTED: []
+0.41734 | 0.00000/83686 | 0.04658/575 | 0.00000 | 0.00022
+
+- Events.ITERATION_COMPLETED: ['Engine._handler_wrapper.<locals>.wrapper', 'run.<locals>.on_iteration_completed']
+3695.12549 | 0.00021/7938 | 32.50097/1999 | 0.04199 | 0.63540
+
+- Events.EPOCH_COMPLETED: ['run.<locals>.log_intermediate_results', 'run.<locals>.on_epoch_completed']
+670.34558 | 123.19122/2 | 149.93854/0 | 134.06912 | 14.32432
+
+- Events.COMPLETED: ['run.<locals>.on_training_completed']
+not yet triggered
+
+2024-04-26 11:54:36,491 - ignite.engine.engine.Engine - INFO - Engine run starting with max_epochs=1.
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Drawing debug image "validation/image_50_0"
+Drawing debug image "validation/image_50_1"
+Drawing debug image "validation/image_50_2"
+Drawing debug image "validation/image_50_3"
+Evaluation: Iteration: 100
+Drawing debug image "validation/image_100_0"
+Drawing debug image "validation/image_100_1"
+Drawing debug image "validation/image_100_2"
+Drawing debug image "validation/image_100_3"
+Drawing debug image "validation/image_150_0"
+Drawing debug image "validation/image_150_1"
+Drawing debug image "validation/image_150_2"
+Drawing debug image "validation/image_150_3"
+Evaluation: Iteration: 200
+Drawing debug image "validation/image_200_0"
+Drawing debug image "validation/image_200_1"
+Drawing debug image "validation/image_200_2"
+Drawing debug image "validation/image_200_3"
+Drawing debug image "validation/image_250_0"
+Drawing debug image "validation/image_250_1"
+Drawing debug image "validation/image_250_2"
+Drawing debug image "validation/image_250_3"
+Evaluation: Iteration: 300
+Drawing debug image "validation/image_300_0"
+Drawing debug image "validation/image_300_1"
+Drawing debug image "validation/image_300_2"
+Drawing debug image "validation/image_300_3"
+Drawing debug image "validation/image_350_0"
+Drawing debug image "validation/image_350_1"
+Drawing debug image "validation/image_350_2"
+Drawing debug image "validation/image_350_3"
+Evaluation: Iteration: 400
+Drawing debug image "validation/image_400_0"
+Drawing debug image "validation/image_400_1"
+Drawing debug image "validation/image_400_2"
+Drawing debug image "validation/image_400_3"
+Drawing debug image "validation/image_450_0"
+Drawing debug image "validation/image_450_1"
+Drawing debug image "validation/image_450_2"
+Drawing debug image "validation/image_450_3"
+Evaluation: Iteration: 500
+Drawing debug image "validation/image_500_0"
+Drawing debug image "validation/image_500_1"
+Drawing debug image "validation/image_500_2"
+Drawing debug image "validation/image_500_3"
+Accumulating evaluation results...
+DONE (t=0.63s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.358
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.645
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.349
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.164
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.431
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.575
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.149
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.394
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.467
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.274
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.540
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.679
+Accumulating evaluation results...
+DONE (t=0.54s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.358
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.645
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.349
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.164
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.431
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.575
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.149
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.394
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.467
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.274
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.540
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.679
+Accumulating evaluation results...
+DONE (t=0.55s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.358
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.645
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.349
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.164
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.431
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.575
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.149
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.394
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.467
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.274
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.540
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.679
+2024-04-26 11:56:40,551 - ignite.engine.engine.Engine - INFO - Epoch[1] Complete. Time taken: 00:02:02.912
+2024-04-26 11:56:40,551 - ignite.engine.engine.Engine - INFO - Engine run complete. Time taken: 00:02:04.061
+Saving model checkpoint
+Model checkpoint from epoch 6 was saved at ./gpu6/checkpoints/model_epoch_6.pth
+2024-04-26 11:56:42,011 - ignite.engine.engine.Engine - INFO - Epoch[6] Complete. Time taken: 01:49:47.666
+Epoch: 7, Iteration: 88100, Loss: 0.5118687748908997
+Epoch: 7, Iteration: 88200, Loss: 0.46283960342407227
+Epoch: 7, Iteration: 88300, Loss: 0.36665183305740356
+Epoch: 7, Iteration: 88400, Loss: 0.47044289112091064
+Epoch: 7, Iteration: 88500, Loss: 0.30298060178756714
+Epoch: 7, Iteration: 88600, Loss: 0.3667904734611511
+Epoch: 7, Iteration: 88700, Loss: 0.452412873506546
+Epoch: 7, Iteration: 88800, Loss: 0.491632342338562
+Epoch: 7, Iteration: 88900, Loss: 0.28637978434562683
+Epoch: 7, Iteration: 89000, Loss: 0.49360835552215576
+Epoch: 7, Iteration: 89100, Loss: 0.1343911737203598
+Epoch: 7, Iteration: 89200, Loss: 0.18445824086666107
+Epoch: 7, Iteration: 89300, Loss: 0.265033483505249
+Epoch: 7, Iteration: 89400, Loss: 0.23428639769554138
+Epoch: 7, Iteration: 89500, Loss: 0.1679980456829071
+Epoch: 7, Iteration: 89600, Loss: 0.14821799099445343
+Epoch: 7, Iteration: 89700, Loss: 0.34822219610214233
+Epoch: 7, Iteration: 89800, Loss: 0.5424543023109436
+Epoch: 7, Iteration: 89900, Loss: 0.1441374272108078
+Epoch: 7, Iteration: 90000, Loss: 0.33980631828308105
+Epoch: 7, Iteration: 90100, Loss: 0.34735220670700073
+Epoch: 7, Iteration: 90200, Loss: 0.23472565412521362
+Epoch: 7, Iteration: 90300, Loss: 0.39208680391311646
+Epoch: 7, Iteration: 90400, Loss: 0.149403378367424
+Epoch: 7, Iteration: 90500, Loss: 0.4004693627357483
+Epoch: 7, Iteration: 90600, Loss: 0.3392066955566406
+Epoch: 7, Iteration: 90700, Loss: 0.38495972752571106
+Epoch: 7, Iteration: 90800, Loss: 0.21804001927375793
+Epoch: 7, Iteration: 90900, Loss: 0.27039340138435364
+Epoch: 7, Iteration: 91000, Loss: 0.4992380738258362
+Epoch: 7, Iteration: 91100, Loss: 0.5943232774734497
+Epoch: 7, Iteration: 91200, Loss: 0.354351282119751
+Epoch: 7, Iteration: 91300, Loss: 0.0990038812160492
+Epoch: 7, Iteration: 91400, Loss: 0.4095255732536316
+Epoch: 7, Iteration: 91500, Loss: 0.7152073383331299
+Epoch: 7, Iteration: 91600, Loss: 0.19481536746025085
+Epoch: 7, Iteration: 91700, Loss: 0.15455931425094604
+Epoch: 7, Iteration: 91800, Loss: 0.2752387225627899
+Epoch: 7, Iteration: 91900, Loss: 0.3496851623058319
+Epoch: 7, Iteration: 92000, Loss: 0.5580013990402222
+Epoch: 7, Iteration: 92100, Loss: 0.4579142928123474
+Epoch: 7, Iteration: 92200, Loss: 0.6127985119819641
+Epoch: 7, Iteration: 92300, Loss: 0.2604271173477173
+Epoch: 7, Iteration: 92400, Loss: 0.7525776028633118
+Epoch: 7, Iteration: 92500, Loss: 0.42017272114753723
+Epoch: 7, Iteration: 92600, Loss: 0.25500011444091797
+Epoch: 7, Iteration: 92700, Loss: 0.5852391719818115
+Epoch: 7, Iteration: 92800, Loss: 0.526669979095459
+Epoch: 7, Iteration: 92900, Loss: 0.6942787170410156
+Epoch: 7, Iteration: 93000, Loss: 0.7899198532104492
+Epoch: 7, Iteration: 93100, Loss: 0.1481861174106598
+Epoch: 7, Iteration: 93200, Loss: 0.3292166590690613
+Epoch: 7, Iteration: 93300, Loss: 0.3242441415786743
+Epoch: 7, Iteration: 93400, Loss: 0.13749834895133972
+Epoch: 7, Iteration: 93500, Loss: 0.27746960520744324
+Epoch: 7, Iteration: 93600, Loss: 0.4951381981372833
+Epoch: 7, Iteration: 93700, Loss: 0.3841298818588257
+Epoch: 7, Iteration: 93800, Loss: 0.22852939367294312
+Epoch: 7, Iteration: 93900, Loss: 0.6115880608558655
+Epoch: 7, Iteration: 94000, Loss: 0.39092186093330383
+Epoch: 7, Iteration: 94100, Loss: 0.25495484471321106
+Epoch: 7, Iteration: 94200, Loss: 0.578881025314331
+Epoch: 7, Iteration: 94300, Loss: 0.4752298891544342
+Epoch: 7, Iteration: 94400, Loss: 0.40074723958969116
+Epoch: 7, Iteration: 94500, Loss: 0.6199294924736023
+Epoch: 7, Iteration: 94600, Loss: 0.35071930289268494
+Epoch: 7, Iteration: 94700, Loss: 0.40181463956832886
+Epoch: 7, Iteration: 94800, Loss: 0.17407849431037903
+Epoch: 7, Iteration: 94900, Loss: 0.34706154465675354
+Epoch: 7, Iteration: 95000, Loss: 0.5196672081947327
+Epoch: 7, Iteration: 95100, Loss: 0.2696573734283447
+Epoch: 7, Iteration: 95200, Loss: 0.17698244750499725
+Epoch: 7, Iteration: 95300, Loss: 0.49191814661026
+Epoch: 7, Iteration: 95400, Loss: 0.20379789173603058
+Epoch: 7, Iteration: 95500, Loss: 0.2263289988040924
+Epoch: 7, Iteration: 95600, Loss: 0.6798868775367737
+Epoch: 7, Iteration: 95700, Loss: 0.6178563237190247
+Epoch: 7, Iteration: 95800, Loss: 0.5749338269233704
+Epoch: 7, Iteration: 95900, Loss: 0.14697210490703583
+Epoch: 7, Iteration: 96000, Loss: 0.47333335876464844
+Epoch: 7, Iteration: 96100, Loss: 0.35872316360473633
+Epoch: 7, Iteration: 96200, Loss: 0.5572338700294495
+Epoch: 7, Iteration: 96300, Loss: 0.24210897088050842
+Epoch: 7, Iteration: 96400, Loss: 0.5568265318870544
+Epoch: 7, Iteration: 96500, Loss: 0.7013963460922241
+Epoch: 7, Iteration: 96600, Loss: 0.5745887160301208
+Epoch: 7, Iteration: 96700, Loss: 0.19355931878089905
+Epoch: 7, Iteration: 96800, Loss: 0.5849545001983643
+Epoch: 7, Iteration: 96900, Loss: 0.24109818041324615
+Epoch: 7, Iteration: 97000, Loss: 0.3169972002506256
+Epoch: 7, Iteration: 97100, Loss: 0.13709300756454468
+Epoch: 7, Iteration: 97200, Loss: 0.5718315243721008
+Epoch: 7, Iteration: 97300, Loss: 0.15812236070632935
+Epoch: 7, Iteration: 97400, Loss: 0.18350867927074432
+Epoch: 7, Iteration: 97500, Loss: 0.7962707281112671
+Epoch: 7, Iteration: 97600, Loss: 0.4164641797542572
+Epoch: 7, Iteration: 97700, Loss: 0.24049082398414612
+Epoch: 7, Iteration: 97800, Loss: 0.4542040228843689
+Epoch: 7, Iteration: 97900, Loss: 0.3903226852416992
+Epoch: 7, Iteration: 98000, Loss: 0.26672443747520447
+Epoch: 7, Iteration: 98100, Loss: 0.287162721157074
+Epoch: 7, Iteration: 98200, Loss: 0.14385193586349487
+Epoch: 7, Iteration: 98300, Loss: 0.7534799575805664
+Epoch: 7, Iteration: 98400, Loss: 0.2527797222137451
+Epoch: 7, Iteration: 98500, Loss: 0.10040117800235748
+Epoch: 7, Iteration: 98600, Loss: 0.2347089946269989
+Epoch: 7, Iteration: 98700, Loss: 0.24717076122760773
+Epoch: 7, Iteration: 98800, Loss: 0.3382028043270111
+Epoch: 7, Iteration: 98900, Loss: 0.16457471251487732
+Epoch: 7, Iteration: 99000, Loss: 0.29852449893951416
+Epoch: 7, Iteration: 99100, Loss: 0.62934809923172
+Epoch: 7, Iteration: 99200, Loss: 0.3133111596107483
+Epoch: 7, Iteration: 99300, Loss: 0.05078199505805969
+Epoch: 7, Iteration: 99400, Loss: 0.35546302795410156
+Epoch: 7, Iteration: 99500, Loss: 0.636798620223999
+Epoch: 7, Iteration: 99600, Loss: 0.43306538462638855
+Epoch: 7, Iteration: 99700, Loss: 0.6150811910629272
+Epoch: 7, Iteration: 99800, Loss: 0.696884036064148
+Epoch: 7, Iteration: 99900, Loss: 0.29533228278160095
+Epoch: 7, Iteration: 100000, Loss: 0.4946328401565552
+Epoch: 7, Iteration: 100100, Loss: 0.4728385806083679
+Epoch: 7, Iteration: 100200, Loss: 0.3894665837287903
+Epoch: 7, Iteration: 100300, Loss: 0.3360334634780884
+Epoch: 7, Iteration: 100400, Loss: 0.47692131996154785
+Epoch: 7, Iteration: 100500, Loss: 0.25797775387763977
+Epoch: 7, Iteration: 100600, Loss: 0.315239280462265
+Epoch: 7, Iteration: 100700, Loss: 0.22781918942928314
+Epoch: 7, Iteration: 100800, Loss: 0.14609505236148834
+Found 1 degenerate boxes. Keeping 7 boxes.
+tensor([[420.1040, 212.0015, 439.2400, 289.3159],
+        [255.9840, 209.4176, 263.2800, 227.9118],
+        [198.3360, 206.6901, 218.7440, 277.0901],
+        [235.4640, 209.1903, 248.0240, 246.5615],
+        [215.9920, 214.4179, 232.9360, 238.5465],
+        [169.8160, 206.7020, 182.5440, 252.3992],
+        [243.4880, 210.5301, 255.0800, 251.8490]], device='cuda:0')
+Epoch: 7, Iteration: 100900, Loss: 0.42596200108528137
+Epoch: 7, Iteration: 101000, Loss: 0.17631518840789795
+Epoch: 7, Iteration: 101100, Loss: 0.29467645287513733
+Epoch: 7, Iteration: 101200, Loss: 0.8829553127288818
+Epoch: 7, Iteration: 101300, Loss: 0.08379244804382324
+Epoch: 7, Iteration: 101400, Loss: 0.13543476164340973
+Epoch: 7, Iteration: 101500, Loss: 0.3359927237033844
+Epoch: 7, Iteration: 101600, Loss: 0.29665637016296387
+Epoch: 7, Iteration: 101700, Loss: 0.4924149811267853
+Epoch: 7, Iteration: 101800, Loss: 0.3239693343639374
+Epoch: 7, Iteration: 101900, Loss: 0.5954437851905823
+Epoch: 7, Iteration: 102000, Loss: 0.07928401976823807
+Epoch: 7, Iteration: 102100, Loss: 0.3219982385635376
+Epoch: 7, Iteration: 102200, Loss: 0.45453113317489624
+Epoch: 7, Iteration: 102300, Loss: 0.51398104429245
+Epoch: 7, Iteration: 102400, Loss: 0.13565166294574738
+Epoch: 7, Iteration: 102500, Loss: 0.4200802147388458
+Epoch: 7, Iteration: 102600, Loss: 0.4534921944141388
+
+ ----------------------------------------------------
+| Time profiling stats (in seconds):                 |
+ ----------------------------------------------------
+total  |  min/index  |  max/index  |  mean  |  std
+
+Processing function:
+45810.47656 | 0.26821/44003 | 135.03888/0 | 0.44617 | 0.43497
+
+Dataflow:
+235.50290 | 0.00009/71094 | 2.17404/58671 | 0.00229 | 0.01676
+
+Event handlers:
+5146.58057
+
+- Events.STARTED: ['run.<locals>.on_training_started']
+0.00167
+
+- Events.EPOCH_STARTED: ['run.<locals>.on_epoch_started']
+0.01067 | 0.00125/0 | 0.00171/5 | 0.00152 | 0.00014
+
+- Events.ITERATION_STARTED: []
+0.51163 | 0.00000/83686 | 0.04658/575 | 0.00000 | 0.00023
+
+- Events.ITERATION_COMPLETED: ['Engine._handler_wrapper.<locals>.wrapper', 'run.<locals>.on_iteration_completed']
+4347.55225 | 0.00021/7938 | 32.50097/1999 | 0.04234 | 0.63830
+
+- Events.EPOCH_COMPLETED: ['run.<locals>.log_intermediate_results', 'run.<locals>.on_epoch_completed']
+797.35895 | 123.19122/2 | 149.93854/0 | 132.89316 | 13.13188
+
+- Events.COMPLETED: ['run.<locals>.on_training_completed']
+not yet triggered
+
+2024-04-26 13:59:11,873 - ignite.engine.engine.Engine - INFO - Engine run starting with max_epochs=1.
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Drawing debug image "validation/image_50_0"
+Drawing debug image "validation/image_50_1"
+Drawing debug image "validation/image_50_2"
+Drawing debug image "validation/image_50_3"
+Evaluation: Iteration: 100
+Drawing debug image "validation/image_100_0"
+Drawing debug image "validation/image_100_1"
+Drawing debug image "validation/image_100_2"
+Drawing debug image "validation/image_100_3"
+Drawing debug image "validation/image_150_0"
+Drawing debug image "validation/image_150_1"
+Drawing debug image "validation/image_150_2"
+Drawing debug image "validation/image_150_3"
+Evaluation: Iteration: 200
+Drawing debug image "validation/image_200_0"
+Drawing debug image "validation/image_200_1"
+Drawing debug image "validation/image_200_2"
+Drawing debug image "validation/image_200_3"
+Drawing debug image "validation/image_250_0"
+Drawing debug image "validation/image_250_1"
+Drawing debug image "validation/image_250_2"
+Drawing debug image "validation/image_250_3"
+Evaluation: Iteration: 300
+Drawing debug image "validation/image_300_0"
+Drawing debug image "validation/image_300_1"
+Drawing debug image "validation/image_300_2"
+Drawing debug image "validation/image_300_3"
+Drawing debug image "validation/image_350_0"
+Drawing debug image "validation/image_350_1"
+Drawing debug image "validation/image_350_2"
+Drawing debug image "validation/image_350_3"
+Evaluation: Iteration: 400
+Drawing debug image "validation/image_400_0"
+Drawing debug image "validation/image_400_1"
+Drawing debug image "validation/image_400_2"
+Drawing debug image "validation/image_400_3"
+Drawing debug image "validation/image_450_0"
+Drawing debug image "validation/image_450_1"
+Drawing debug image "validation/image_450_2"
+Drawing debug image "validation/image_450_3"
+Evaluation: Iteration: 500
+Drawing debug image "validation/image_500_0"
+Drawing debug image "validation/image_500_1"
+Drawing debug image "validation/image_500_2"
+Drawing debug image "validation/image_500_3"
+Accumulating evaluation results...
+DONE (t=0.55s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.373
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.661
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.365
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.170
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.448
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.594
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.155
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.404
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.477
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.279
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.553
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.692
+Accumulating evaluation results...
+DONE (t=0.55s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.373
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.661
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.365
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.170
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.448
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.594
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.155
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.404
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.477
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.279
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.553
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.692
+Accumulating evaluation results...
+DONE (t=0.55s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.373
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.661
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.365
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.170
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.448
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.594
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.155
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.404
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.477
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.279
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.553
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.692
+2024-04-26 14:01:23,507 - ignite.engine.engine.Engine - INFO - Epoch[1] Complete. Time taken: 00:02:10.486
+2024-04-26 14:01:23,507 - ignite.engine.engine.Engine - INFO - Engine run complete. Time taken: 00:02:11.633
+Saving model checkpoint
+Model checkpoint from epoch 7 was saved at ./gpu6/checkpoints/model_epoch_7.pth
+2024-04-26 14:01:24,720 - ignite.engine.engine.Engine - INFO - Epoch[7] Complete. Time taken: 02:04:42.692
+Epoch: 8, Iteration: 102700, Loss: 0.24207597970962524
+Epoch: 8, Iteration: 102800, Loss: 0.33875733613967896
+Epoch: 8, Iteration: 102900, Loss: 0.10558685660362244
+Epoch: 8, Iteration: 103000, Loss: 0.6791573166847229
+Epoch: 8, Iteration: 103100, Loss: 0.24980777502059937
+Epoch: 8, Iteration: 103200, Loss: 0.22363246977329254
+Epoch: 8, Iteration: 103300, Loss: 0.6779789924621582
+Epoch: 8, Iteration: 103400, Loss: 0.42002689838409424
+Epoch: 8, Iteration: 103500, Loss: 0.4077763259410858
+Epoch: 8, Iteration: 103600, Loss: 0.6304342150688171
+Epoch: 8, Iteration: 103700, Loss: 0.2007487416267395
+Epoch: 8, Iteration: 103800, Loss: 0.5911804437637329
+Epoch: 8, Iteration: 103900, Loss: 0.38193976879119873
+Epoch: 8, Iteration: 104000, Loss: 0.24251225590705872
+Epoch: 8, Iteration: 104100, Loss: 0.3801981806755066
+Epoch: 8, Iteration: 104200, Loss: 0.36168381571769714
+Epoch: 8, Iteration: 104300, Loss: 0.29836684465408325
+Epoch: 8, Iteration: 104400, Loss: 0.29044532775878906
+Epoch: 8, Iteration: 104500, Loss: 0.08782008290290833
+Epoch: 8, Iteration: 104600, Loss: 0.39592841267585754
+Epoch: 8, Iteration: 104700, Loss: 0.09272897243499756
+Epoch: 8, Iteration: 104800, Loss: 0.3905234932899475
+Epoch: 8, Iteration: 104900, Loss: 0.345855712890625
+Epoch: 8, Iteration: 105000, Loss: 0.4586777687072754
+Epoch: 8, Iteration: 105100, Loss: 0.2739030420780182
+Epoch: 8, Iteration: 105200, Loss: 0.9630602598190308
+Epoch: 8, Iteration: 105300, Loss: 0.19575828313827515
+Epoch: 8, Iteration: 105400, Loss: 0.44174066185951233
+Epoch: 8, Iteration: 105500, Loss: 0.48823902010917664
+Epoch: 8, Iteration: 105600, Loss: 0.6763678193092346
+Epoch: 8, Iteration: 105700, Loss: 0.4198126196861267
+Epoch: 8, Iteration: 105800, Loss: 0.11358017474412918
+Epoch: 8, Iteration: 105900, Loss: 0.5349313020706177
+Epoch: 8, Iteration: 106000, Loss: 0.41717463731765747
+Epoch: 8, Iteration: 106100, Loss: 0.42765146493911743
+Epoch: 8, Iteration: 106200, Loss: 0.17223259806632996
+Epoch: 8, Iteration: 106300, Loss: 0.5999981164932251
+Epoch: 8, Iteration: 106400, Loss: 0.2026059329509735
+Epoch: 8, Iteration: 106500, Loss: 0.2854277789592743
+Epoch: 8, Iteration: 106600, Loss: 0.28478267788887024
+Epoch: 8, Iteration: 106700, Loss: 0.38987237215042114
+Epoch: 8, Iteration: 106800, Loss: 0.5379920601844788
+Epoch: 8, Iteration: 106900, Loss: 0.7311297059059143
+Epoch: 8, Iteration: 107000, Loss: 0.2870463728904724
+Epoch: 8, Iteration: 107100, Loss: 0.6919018626213074
+Epoch: 8, Iteration: 107200, Loss: 0.6015710830688477
+Epoch: 8, Iteration: 107300, Loss: 0.2304593324661255
+Epoch: 8, Iteration: 107400, Loss: 0.0966838151216507
+Epoch: 8, Iteration: 107500, Loss: 0.28326958417892456
+Epoch: 8, Iteration: 107600, Loss: 0.4138977825641632
+Epoch: 8, Iteration: 107700, Loss: 0.6655113101005554
+Epoch: 8, Iteration: 107800, Loss: 0.15512670576572418
+Epoch: 8, Iteration: 107900, Loss: 0.48021143674850464
+Epoch: 8, Iteration: 108000, Loss: 0.4941704273223877
+Epoch: 8, Iteration: 108100, Loss: 0.554581880569458
+Epoch: 8, Iteration: 108200, Loss: 0.6058839559555054
+Epoch: 8, Iteration: 108300, Loss: 0.5055555105209351
+Epoch: 8, Iteration: 108400, Loss: 0.15422257781028748
+Epoch: 8, Iteration: 108500, Loss: 0.2824784517288208
+Epoch: 8, Iteration: 108600, Loss: 0.2761577367782593
+Epoch: 8, Iteration: 108700, Loss: 0.36880573630332947
+Epoch: 8, Iteration: 108800, Loss: 0.18845994770526886
+Epoch: 8, Iteration: 108900, Loss: 0.39385539293289185
+Epoch: 8, Iteration: 109000, Loss: 0.26358017325401306
+Epoch: 8, Iteration: 109100, Loss: 0.3779638707637787
+Epoch: 8, Iteration: 109200, Loss: 0.6569122076034546
+Epoch: 8, Iteration: 109300, Loss: 0.539181649684906
+Epoch: 8, Iteration: 109400, Loss: 0.3066781163215637
+Epoch: 8, Iteration: 109500, Loss: 0.23820273578166962
+Epoch: 8, Iteration: 109600, Loss: 0.20442400872707367
+Epoch: 8, Iteration: 109700, Loss: 0.4031650424003601
+Epoch: 8, Iteration: 109800, Loss: 0.29275962710380554
+Epoch: 8, Iteration: 109900, Loss: 0.3331346809864044
+Epoch: 8, Iteration: 110000, Loss: 0.36216700077056885
+Epoch: 8, Iteration: 110100, Loss: 0.5187066793441772
+Epoch: 8, Iteration: 110200, Loss: 0.3710891902446747
+Epoch: 8, Iteration: 110300, Loss: 0.41160768270492554
+Epoch: 8, Iteration: 110400, Loss: 0.49002504348754883
+Epoch: 8, Iteration: 110500, Loss: 0.2514115869998932
+Epoch: 8, Iteration: 110600, Loss: 0.3607211112976074
+Epoch: 8, Iteration: 110700, Loss: 0.2368449568748474
+Epoch: 8, Iteration: 110800, Loss: 0.6318358182907104
+Epoch: 8, Iteration: 110900, Loss: 0.3080708980560303
+Epoch: 8, Iteration: 111000, Loss: 0.37486112117767334
+Epoch: 8, Iteration: 111100, Loss: 0.25088733434677124
+Epoch: 8, Iteration: 111200, Loss: 0.4284934997558594
+Epoch: 8, Iteration: 111300, Loss: 0.36758363246917725
+Epoch: 8, Iteration: 111400, Loss: 0.4588887393474579
+Epoch: 8, Iteration: 111500, Loss: 0.33404749631881714
+Epoch: 8, Iteration: 111600, Loss: 0.13090090453624725
+Epoch: 8, Iteration: 111700, Loss: 0.5764267444610596
+Epoch: 8, Iteration: 111800, Loss: 0.4027473032474518
+Epoch: 8, Iteration: 111900, Loss: 0.311958909034729
+Epoch: 8, Iteration: 112000, Loss: 0.16836759448051453
+Epoch: 8, Iteration: 112100, Loss: 0.13296054303646088
+Epoch: 8, Iteration: 112200, Loss: 0.5889341831207275
+Epoch: 8, Iteration: 112300, Loss: 0.3062826097011566
+Epoch: 8, Iteration: 112400, Loss: 0.06275177747011185
+Epoch: 8, Iteration: 112500, Loss: 0.26633235812187195
+Epoch: 8, Iteration: 112600, Loss: 0.1247161477804184
+Epoch: 8, Iteration: 112700, Loss: 0.5705198049545288
+Epoch: 8, Iteration: 112800, Loss: 0.27790722250938416
+Epoch: 8, Iteration: 112900, Loss: 0.3918992877006531
+Epoch: 8, Iteration: 113000, Loss: 0.1720617413520813
+Epoch: 8, Iteration: 113100, Loss: 0.27386021614074707
+Epoch: 8, Iteration: 113200, Loss: 0.12887541949748993
+Epoch: 8, Iteration: 113300, Loss: 0.7255710363388062
+Epoch: 8, Iteration: 113400, Loss: 0.2308327704668045
+Epoch: 8, Iteration: 113500, Loss: 0.12164708971977234
+Epoch: 8, Iteration: 113600, Loss: 0.45686978101730347
+Epoch: 8, Iteration: 113700, Loss: 0.6226087808609009
+Epoch: 8, Iteration: 113800, Loss: 0.3162767291069031
+Epoch: 8, Iteration: 113900, Loss: 0.334943562746048
+Epoch: 8, Iteration: 114000, Loss: 0.38512665033340454
+Epoch: 8, Iteration: 114100, Loss: 0.17259185016155243
+Epoch: 8, Iteration: 114200, Loss: 0.33383098244667053
+Epoch: 8, Iteration: 114300, Loss: 0.27927881479263306
+Epoch: 8, Iteration: 114400, Loss: 1.012090802192688
+Epoch: 8, Iteration: 114500, Loss: 0.5594498515129089
+Epoch: 8, Iteration: 114600, Loss: 0.4123249351978302
+Epoch: 8, Iteration: 114700, Loss: 0.45026442408561707
+Epoch: 8, Iteration: 114800, Loss: 0.6013890504837036
+Epoch: 8, Iteration: 114900, Loss: 0.4948766827583313
+Epoch: 8, Iteration: 115000, Loss: 0.2690607011318207
+Epoch: 8, Iteration: 115100, Loss: 0.2842952013015747
+Epoch: 8, Iteration: 115200, Loss: 0.3644208610057831
+Epoch: 8, Iteration: 115300, Loss: 0.6333959102630615
+Epoch: 8, Iteration: 115400, Loss: 0.14326804876327515
+Epoch: 8, Iteration: 115500, Loss: 0.2620682716369629
+Epoch: 8, Iteration: 115600, Loss: 0.0777294710278511
+Epoch: 8, Iteration: 115700, Loss: 0.39353567361831665
+Epoch: 8, Iteration: 115800, Loss: 0.14994806051254272
+Epoch: 8, Iteration: 115900, Loss: 0.2665610909461975
+Epoch: 8, Iteration: 116000, Loss: 0.3580511808395386
+Epoch: 8, Iteration: 116100, Loss: 0.189667746424675
+Epoch: 8, Iteration: 116200, Loss: 0.76109778881073
+Epoch: 8, Iteration: 116300, Loss: 0.30417391657829285
+Epoch: 8, Iteration: 116400, Loss: 0.3234139680862427
+Epoch: 8, Iteration: 116500, Loss: 0.5353015065193176
+Epoch: 8, Iteration: 116600, Loss: 0.331827312707901
+Epoch: 8, Iteration: 116700, Loss: 0.516380250453949
+Found 1 degenerate boxes. Keeping 7 boxes.
+tensor([[420.1040, 212.0015, 439.2400, 289.3159],
+        [255.9840, 209.4176, 263.2800, 227.9118],
+        [198.3360, 206.6901, 218.7440, 277.0901],
+        [235.4640, 209.1903, 248.0240, 246.5615],
+        [215.9920, 214.4179, 232.9360, 238.5465],
+        [169.8160, 206.7020, 182.5440, 252.3992],
+        [243.4880, 210.5301, 255.0800, 251.8490]], device='cuda:0')
+Epoch: 8, Iteration: 116800, Loss: 0.16839642822742462
+Epoch: 8, Iteration: 116900, Loss: 0.5630477666854858
+Epoch: 8, Iteration: 117000, Loss: 0.5556848645210266
+Epoch: 8, Iteration: 117100, Loss: 0.422357976436615
+Epoch: 8, Iteration: 117200, Loss: 0.08953648060560226
+Epoch: 8, Iteration: 117300, Loss: 0.09421677887439728
+
+ ----------------------------------------------------
+| Time profiling stats (in seconds):                 |
+ ----------------------------------------------------
+total  |  min/index  |  max/index  |  mean  |  std
+
+Processing function:
+52403.83984 | 0.26821/44003 | 135.03888/0 | 0.44658 | 0.40720
+
+Dataflow:
+262.44699 | 0.00009/71094 | 2.17404/58671 | 0.00224 | 0.01664
+
+Event handlers:
+5910.24072
+
+- Events.STARTED: ['run.<locals>.on_training_started']
+0.00167
+
+- Events.EPOCH_STARTED: ['run.<locals>.on_epoch_started']
+0.01237 | 0.00125/0 | 0.00171/5 | 0.00155 | 0.00014
+
+- Events.ITERATION_STARTED: []
+0.58617 | 0.00000/83686 | 0.04658/575 | 0.00000 | 0.00022
+
+- Events.ITERATION_COMPLETED: ['Engine._handler_wrapper.<locals>.wrapper', 'run.<locals>.on_iteration_completed']
+4976.54053 | 0.00021/7938 | 32.50097/1999 | 0.04241 | 0.63771
+
+- Events.EPOCH_COMPLETED: ['run.<locals>.log_intermediate_results', 'run.<locals>.on_epoch_completed']
+931.75397 | 123.19122/2 | 149.93854/0 | 133.10771 | 12.00114
+
+- Events.COMPLETED: ['run.<locals>.on_training_completed']
+not yet triggered
+
+2024-04-26 16:02:26,633 - ignite.engine.engine.Engine - INFO - Engine run starting with max_epochs=1.
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Drawing debug image "validation/image_50_0"
+Drawing debug image "validation/image_50_1"
+Drawing debug image "validation/image_50_2"
+Drawing debug image "validation/image_50_3"
+Evaluation: Iteration: 100
+Drawing debug image "validation/image_100_0"
+Drawing debug image "validation/image_100_1"
+Drawing debug image "validation/image_100_2"
+Drawing debug image "validation/image_100_3"
+Drawing debug image "validation/image_150_0"
+Drawing debug image "validation/image_150_1"
+Drawing debug image "validation/image_150_2"
+Drawing debug image "validation/image_150_3"
+Evaluation: Iteration: 200
+Drawing debug image "validation/image_200_0"
+Drawing debug image "validation/image_200_1"
+Drawing debug image "validation/image_200_2"
+Drawing debug image "validation/image_200_3"
+Drawing debug image "validation/image_250_0"
+Drawing debug image "validation/image_250_1"
+Drawing debug image "validation/image_250_2"
+Drawing debug image "validation/image_250_3"
+Evaluation: Iteration: 300
+Drawing debug image "validation/image_300_0"
+Drawing debug image "validation/image_300_1"
+Drawing debug image "validation/image_300_2"
+Drawing debug image "validation/image_300_3"
+Drawing debug image "validation/image_350_0"
+Drawing debug image "validation/image_350_1"
+Drawing debug image "validation/image_350_2"
+Drawing debug image "validation/image_350_3"
+Evaluation: Iteration: 400
+Drawing debug image "validation/image_400_0"
+Drawing debug image "validation/image_400_1"
+Drawing debug image "validation/image_400_2"
+Drawing debug image "validation/image_400_3"
+Drawing debug image "validation/image_450_0"
+Drawing debug image "validation/image_450_1"
+Drawing debug image "validation/image_450_2"
+Drawing debug image "validation/image_450_3"
+Evaluation: Iteration: 500
+Drawing debug image "validation/image_500_0"
+Drawing debug image "validation/image_500_1"
+Drawing debug image "validation/image_500_2"
+Drawing debug image "validation/image_500_3"
+Accumulating evaluation results...
+DONE (t=0.58s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.372
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.663
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.364
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.170
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.447
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.586
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.153
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.402
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.477
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.283
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.552
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.686
+Accumulating evaluation results...
+DONE (t=0.50s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.372
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.663
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.364
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.170
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.447
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.586
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.153
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.402
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.477
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.283
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.552
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.686
+Accumulating evaluation results...
+DONE (t=0.54s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.372
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.663
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.364
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.170
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.447
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.586
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.153
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.402
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.477
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.283
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.552
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.686
+2024-04-26 16:04:34,150 - ignite.engine.engine.Engine - INFO - Epoch[1] Complete. Time taken: 00:02:05.840
+2024-04-26 16:04:34,150 - ignite.engine.engine.Engine - INFO - Engine run complete. Time taken: 00:02:07.517
+Saving model checkpoint
+Model checkpoint from epoch 8 was saved at ./gpu6/checkpoints/model_epoch_8.pth
+2024-04-26 16:04:35,560 - ignite.engine.engine.Engine - INFO - Epoch[8] Complete. Time taken: 02:03:10.840
+Epoch: 9, Iteration: 117400, Loss: 0.24348463118076324
+Epoch: 9, Iteration: 117500, Loss: 0.27973708510398865
+Epoch: 9, Iteration: 117600, Loss: 0.7555502653121948
+Epoch: 9, Iteration: 117700, Loss: 0.11369851231575012
+Epoch: 9, Iteration: 117800, Loss: 0.37522780895233154
+Epoch: 9, Iteration: 117900, Loss: 0.16414865851402283
+Epoch: 9, Iteration: 118000, Loss: 0.07250111550092697
+Epoch: 9, Iteration: 118100, Loss: 0.3403782248497009
+Epoch: 9, Iteration: 118200, Loss: 0.18642014265060425
+Epoch: 9, Iteration: 118300, Loss: 0.41668733954429626
+Epoch: 9, Iteration: 118400, Loss: 0.6785159707069397
+Epoch: 9, Iteration: 118500, Loss: 0.5821418762207031
+Epoch: 9, Iteration: 118600, Loss: 0.09754075855016708
+Epoch: 9, Iteration: 118700, Loss: 0.3365294635295868
+Epoch: 9, Iteration: 118800, Loss: 0.18694831430912018
+Epoch: 9, Iteration: 118900, Loss: 0.379018634557724
+Epoch: 9, Iteration: 119000, Loss: 0.3902926445007324
+Epoch: 9, Iteration: 119100, Loss: 0.31806689500808716
+Epoch: 9, Iteration: 119200, Loss: 0.457611620426178
+Epoch: 9, Iteration: 119300, Loss: 0.41653361916542053
+Epoch: 9, Iteration: 119400, Loss: 0.20244798064231873
+Epoch: 9, Iteration: 119500, Loss: 0.20956642925739288
+Epoch: 9, Iteration: 119600, Loss: 0.1093994677066803
+Epoch: 9, Iteration: 119700, Loss: 0.3524174392223358
+Epoch: 9, Iteration: 119800, Loss: 0.4138900637626648
+Epoch: 9, Iteration: 119900, Loss: 0.2723504304885864
+Epoch: 9, Iteration: 120000, Loss: 0.29311245679855347
+Epoch: 9, Iteration: 120100, Loss: 1.1097897291183472
+Epoch: 9, Iteration: 120200, Loss: 0.17964555323123932
+Epoch: 9, Iteration: 120300, Loss: 0.38266807794570923
+Epoch: 9, Iteration: 120400, Loss: 0.19896231591701508
+Epoch: 9, Iteration: 120500, Loss: 0.13051214814186096
+Epoch: 9, Iteration: 120600, Loss: 0.5942232608795166
+Epoch: 9, Iteration: 120700, Loss: 0.43593478202819824
+Epoch: 9, Iteration: 120800, Loss: 0.3748515844345093
+Epoch: 9, Iteration: 120900, Loss: 0.21372981369495392
+Epoch: 9, Iteration: 121000, Loss: 0.3389672636985779
+Epoch: 9, Iteration: 121100, Loss: 0.4847855567932129
+Epoch: 9, Iteration: 121200, Loss: 0.46716004610061646
+Epoch: 9, Iteration: 121300, Loss: 0.42456915974617004
+Epoch: 9, Iteration: 121400, Loss: 0.48437583446502686
+Epoch: 9, Iteration: 121500, Loss: 0.4536827802658081
+Epoch: 9, Iteration: 121600, Loss: 0.42946699261665344
+Epoch: 9, Iteration: 121700, Loss: 0.2404889166355133
+Epoch: 9, Iteration: 121800, Loss: 0.4229496419429779
+Epoch: 9, Iteration: 121900, Loss: 0.4282692074775696
+Epoch: 9, Iteration: 122000, Loss: 0.3276699483394623
+Epoch: 9, Iteration: 122100, Loss: 0.3960075378417969
+Epoch: 9, Iteration: 122200, Loss: 0.23155653476715088
+Epoch: 9, Iteration: 122300, Loss: 0.44938015937805176
+Epoch: 9, Iteration: 122400, Loss: 0.5733295679092407
+Epoch: 9, Iteration: 122500, Loss: 0.5467705726623535
+Epoch: 9, Iteration: 122600, Loss: 0.5057598352432251
+Epoch: 9, Iteration: 122700, Loss: 0.2084789127111435
+Epoch: 9, Iteration: 122800, Loss: 0.11446112394332886
+Epoch: 9, Iteration: 122900, Loss: 0.5019305348396301
+Epoch: 9, Iteration: 123000, Loss: 0.21157050132751465
+Epoch: 9, Iteration: 123100, Loss: 0.10819155722856522
+Epoch: 9, Iteration: 123200, Loss: 0.42715591192245483
+Epoch: 9, Iteration: 123300, Loss: 0.21962405741214752
+Epoch: 9, Iteration: 123400, Loss: 0.6646535992622375
+Epoch: 9, Iteration: 123500, Loss: 0.452161967754364
+Epoch: 9, Iteration: 123600, Loss: 0.36095479130744934
+Epoch: 9, Iteration: 123700, Loss: 0.32068106532096863
+Epoch: 9, Iteration: 123800, Loss: 0.4119490683078766
+Epoch: 9, Iteration: 123900, Loss: 0.23748168349266052
+Epoch: 9, Iteration: 124000, Loss: 0.14069344103336334
+Epoch: 9, Iteration: 124100, Loss: 0.4068041443824768
+Epoch: 9, Iteration: 124200, Loss: 0.3790590167045593
+Epoch: 9, Iteration: 124300, Loss: 0.3450225591659546
+Epoch: 9, Iteration: 124400, Loss: 0.12498223036527634
+Epoch: 9, Iteration: 124500, Loss: 0.4223237633705139
+Epoch: 9, Iteration: 124600, Loss: 0.6861719489097595
+Epoch: 9, Iteration: 124700, Loss: 0.26867806911468506
+Epoch: 9, Iteration: 124800, Loss: 0.34790942072868347
+Epoch: 9, Iteration: 124900, Loss: 0.4875034689903259
+Epoch: 9, Iteration: 125000, Loss: 0.5763822793960571
+Epoch: 9, Iteration: 125100, Loss: 0.1850377917289734
+Epoch: 9, Iteration: 125200, Loss: 0.4534076154232025
+Epoch: 9, Iteration: 125300, Loss: 0.3690280020236969
+Epoch: 9, Iteration: 125400, Loss: 0.333486407995224
+Epoch: 9, Iteration: 125500, Loss: 0.221090629696846
+Epoch: 9, Iteration: 125600, Loss: 0.3309105932712555
+Epoch: 9, Iteration: 125700, Loss: 0.20148083567619324
+Epoch: 9, Iteration: 125800, Loss: 0.694587230682373
+Epoch: 9, Iteration: 125900, Loss: 0.5440678000450134
+Epoch: 9, Iteration: 126000, Loss: 0.28960832953453064
+Epoch: 9, Iteration: 126100, Loss: 0.04388680309057236
+Epoch: 9, Iteration: 126200, Loss: 0.6583881378173828
+Epoch: 9, Iteration: 126300, Loss: 0.17899371683597565
+Epoch: 9, Iteration: 126400, Loss: 0.3508100211620331
+Epoch: 9, Iteration: 126500, Loss: 0.09975698590278625
+Epoch: 9, Iteration: 126600, Loss: 0.4607997238636017
+Epoch: 9, Iteration: 126700, Loss: 0.5342749953269958
+Epoch: 9, Iteration: 126800, Loss: 0.3158605694770813
+Epoch: 9, Iteration: 126900, Loss: 0.20793889462947845
+Epoch: 9, Iteration: 127000, Loss: 0.35572996735572815
+Epoch: 9, Iteration: 127100, Loss: 0.6630814075469971
+Epoch: 9, Iteration: 127200, Loss: 0.3893287479877472
+Epoch: 9, Iteration: 127300, Loss: 0.08518663048744202
+Epoch: 9, Iteration: 127400, Loss: 0.731580376625061
+Epoch: 9, Iteration: 127500, Loss: 0.49784064292907715
+Epoch: 9, Iteration: 127600, Loss: 0.11429943889379501
+Epoch: 9, Iteration: 127700, Loss: 0.3799387514591217
+Epoch: 9, Iteration: 127800, Loss: 0.08918653428554535
+Epoch: 9, Iteration: 127900, Loss: 0.33074891567230225
+Epoch: 9, Iteration: 128000, Loss: 0.3596310615539551
+Epoch: 9, Iteration: 128100, Loss: 0.4627147912979126
+Epoch: 9, Iteration: 128200, Loss: 0.05757215619087219
+Epoch: 9, Iteration: 128300, Loss: 0.17440025508403778
+Epoch: 9, Iteration: 128400, Loss: 0.4913039803504944
+Epoch: 9, Iteration: 128500, Loss: 0.2580326199531555
+Epoch: 9, Iteration: 128600, Loss: 0.3865375816822052
+Epoch: 9, Iteration: 128700, Loss: 0.27476218342781067
+Epoch: 9, Iteration: 128800, Loss: 0.21392066776752472
+Epoch: 9, Iteration: 128900, Loss: 0.16013392806053162
+Epoch: 9, Iteration: 129000, Loss: 0.21780040860176086
+Epoch: 9, Iteration: 129100, Loss: 0.2138405442237854
+Epoch: 9, Iteration: 129200, Loss: 0.19416223466396332
+Epoch: 9, Iteration: 129300, Loss: 0.33857259154319763
+Epoch: 9, Iteration: 129400, Loss: 0.3454935550689697
+Epoch: 9, Iteration: 129500, Loss: 0.5232650637626648
+Epoch: 9, Iteration: 129600, Loss: 0.2526331841945648
+Epoch: 9, Iteration: 129700, Loss: 0.37050047516822815
+Epoch: 9, Iteration: 129800, Loss: 0.6289666891098022
+Epoch: 9, Iteration: 129900, Loss: 0.4649055600166321
+Epoch: 9, Iteration: 130000, Loss: 0.3467927575111389
+Epoch: 9, Iteration: 130100, Loss: 0.08299044519662857
+Epoch: 9, Iteration: 130200, Loss: 0.47699689865112305
+Epoch: 9, Iteration: 130300, Loss: 0.2590991258621216
+Epoch: 9, Iteration: 130400, Loss: 0.44339635968208313
+Epoch: 9, Iteration: 130500, Loss: 0.6050650477409363
+Epoch: 9, Iteration: 130600, Loss: 0.12942178547382355
+Epoch: 9, Iteration: 130700, Loss: 0.4831508696079254
+Epoch: 9, Iteration: 130800, Loss: 0.3691374361515045
+Found 1 degenerate boxes. Keeping 7 boxes.
+tensor([[ 72.7600, 212.0015,  91.8960, 289.3159],
+        [248.7200, 209.4176, 256.0160, 227.9118],
+        [293.2560, 206.6901, 313.6640, 277.0901],
+        [263.9760, 209.1903, 276.5360, 246.5615],
+        [279.0640, 214.4179, 296.0080, 238.5465],
+        [329.4560, 206.7020, 342.1840, 252.3992],
+        [256.9200, 210.5301, 268.5120, 251.8490]], device='cuda:0')
+Epoch: 9, Iteration: 130900, Loss: 0.33479398488998413
+Epoch: 9, Iteration: 131000, Loss: 0.34372928738594055
+Epoch: 9, Iteration: 131100, Loss: 0.5201298594474792
+Epoch: 9, Iteration: 131200, Loss: 0.1722135841846466
+Epoch: 9, Iteration: 131300, Loss: 0.43398353457450867
+Epoch: 9, Iteration: 131400, Loss: 0.6525593996047974
+Epoch: 9, Iteration: 131500, Loss: 0.15691669285297394
+Epoch: 9, Iteration: 131600, Loss: 0.15046298503875732
+Epoch: 9, Iteration: 131700, Loss: 0.16316422820091248
+Epoch: 9, Iteration: 131800, Loss: 0.25806760787963867
+Epoch: 9, Iteration: 131900, Loss: 0.417927086353302
+Epoch: 9, Iteration: 132000, Loss: 0.3693503737449646
+
+ ----------------------------------------------------
+| Time profiling stats (in seconds):                 |
+ ----------------------------------------------------
+total  |  min/index  |  max/index  |  mean  |  std
+
+Processing function:
+58613.85156 | 0.26821/44003 | 135.03888/0 | 0.44400 | 0.38416
+
+Dataflow:
+280.71786 | 0.00009/128348 | 2.17579/117343 | 0.00213 | 0.01682
+
+Event handlers:
+6544.15039
+
+- Events.STARTED: ['run.<locals>.on_training_started']
+0.00167
+
+- Events.EPOCH_STARTED: ['run.<locals>.on_epoch_started']
+0.01434 | 0.00125/0 | 0.00197/8 | 0.00159 | 0.00020
+
+- Events.ITERATION_STARTED: []
+0.63412 | 0.00000/128181 | 0.04658/575 | 0.00000 | 0.00021
+
+- Events.ITERATION_COMPLETED: ['Engine._handler_wrapper.<locals>.wrapper', 'run.<locals>.on_iteration_completed']
+5480.10449 | 0.00021/7938 | 32.50097/1999 | 0.04151 | 0.62336
+
+- Events.EPOCH_COMPLETED: ['run.<locals>.log_intermediate_results', 'run.<locals>.on_epoch_completed']
+1061.93030 | 123.19122/2 | 149.93854/0 | 132.74129 | 11.15913
+
+- Events.COMPLETED: ['run.<locals>.on_training_completed']
+not yet triggered
+
+2024-04-26 17:56:59,450 - ignite.engine.engine.Engine - INFO - Engine run starting with max_epochs=1.
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Drawing debug image "validation/image_50_0"
+Drawing debug image "validation/image_50_1"
+Drawing debug image "validation/image_50_2"
+Drawing debug image "validation/image_50_3"
+Evaluation: Iteration: 100
+Drawing debug image "validation/image_100_0"
+Drawing debug image "validation/image_100_1"
+Drawing debug image "validation/image_100_2"
+Drawing debug image "validation/image_100_3"
+Drawing debug image "validation/image_150_0"
+Drawing debug image "validation/image_150_1"
+Drawing debug image "validation/image_150_2"
+Drawing debug image "validation/image_150_3"
+Evaluation: Iteration: 200
+Drawing debug image "validation/image_200_0"
+Drawing debug image "validation/image_200_1"
+Drawing debug image "validation/image_200_2"
+Drawing debug image "validation/image_200_3"
+Drawing debug image "validation/image_250_0"
+Drawing debug image "validation/image_250_1"
+Drawing debug image "validation/image_250_2"
+Drawing debug image "validation/image_250_3"
+Evaluation: Iteration: 300
+Drawing debug image "validation/image_300_0"
+Drawing debug image "validation/image_300_1"
+Drawing debug image "validation/image_300_2"
+Drawing debug image "validation/image_300_3"
+Drawing debug image "validation/image_350_0"
+Drawing debug image "validation/image_350_1"
+Drawing debug image "validation/image_350_2"
+Drawing debug image "validation/image_350_3"
+Evaluation: Iteration: 400
+Drawing debug image "validation/image_400_0"
+Drawing debug image "validation/image_400_1"
+Drawing debug image "validation/image_400_2"
+Drawing debug image "validation/image_400_3"
+Drawing debug image "validation/image_450_0"
+Drawing debug image "validation/image_450_1"
+Drawing debug image "validation/image_450_2"
+Drawing debug image "validation/image_450_3"
+Evaluation: Iteration: 500
+Drawing debug image "validation/image_500_0"
+Drawing debug image "validation/image_500_1"
+Drawing debug image "validation/image_500_2"
+Drawing debug image "validation/image_500_3"
+Accumulating evaluation results...
+DONE (t=0.57s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.375
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.663
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.367
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.173
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.449
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.595
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.154
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.405
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.481
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.286
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.554
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.694
+Accumulating evaluation results...
+DONE (t=0.51s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.375
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.663
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.367
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.173
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.449
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.595
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.154
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.405
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.481
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.286
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.554
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.694
+Accumulating evaluation results...
+DONE (t=0.52s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.375
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.663
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.367
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.173
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.449
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.595
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.154
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.405
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.481
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.286
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.554
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.694
+2024-04-26 17:59:11,061 - ignite.engine.engine.Engine - INFO - Epoch[1] Complete. Time taken: 00:02:10.214
+2024-04-26 17:59:11,067 - ignite.engine.engine.Engine - INFO - Engine run complete. Time taken: 00:02:11.616
+Saving model checkpoint
+Model checkpoint from epoch 9 was saved at ./gpu6/checkpoints/model_epoch_9.pth
+2024-04-26 17:59:12,326 - ignite.engine.engine.Engine - INFO - Epoch[9] Complete. Time taken: 01:54:36.766
+Epoch: 10, Iteration: 132100, Loss: 0.510282039642334
+Epoch: 10, Iteration: 132200, Loss: 0.30711793899536133
+Epoch: 10, Iteration: 132300, Loss: 0.2567002773284912
+Epoch: 10, Iteration: 132400, Loss: 0.13053660094738007
+Epoch: 10, Iteration: 132500, Loss: 0.33850258588790894
+Epoch: 10, Iteration: 132600, Loss: 0.1276952475309372
+Epoch: 10, Iteration: 132700, Loss: 0.6274086833000183
+Epoch: 10, Iteration: 132800, Loss: 0.603988528251648
+Epoch: 10, Iteration: 132900, Loss: 0.48359450697898865
+Epoch: 10, Iteration: 133000, Loss: 0.6439357399940491
+Epoch: 10, Iteration: 133100, Loss: 0.3968471586704254
+Epoch: 10, Iteration: 133200, Loss: 0.09187806397676468
+Epoch: 10, Iteration: 133300, Loss: 0.4564242959022522
+Epoch: 10, Iteration: 133400, Loss: 0.5471395254135132
+Epoch: 10, Iteration: 133500, Loss: 0.5851185321807861
+Epoch: 10, Iteration: 133600, Loss: 0.3185864984989166
+Epoch: 10, Iteration: 133700, Loss: 0.37922486662864685
+Epoch: 10, Iteration: 133800, Loss: 0.35413551330566406
+Epoch: 10, Iteration: 133900, Loss: 0.15921740233898163
+Epoch: 10, Iteration: 134000, Loss: 0.707359790802002
+Epoch: 10, Iteration: 134100, Loss: 0.6040544509887695
+Epoch: 10, Iteration: 134200, Loss: 0.42955929040908813
+Epoch: 10, Iteration: 134300, Loss: 0.1884312480688095
+Epoch: 10, Iteration: 134400, Loss: 0.37064361572265625
+Epoch: 10, Iteration: 134500, Loss: 0.25033053755760193
+Epoch: 10, Iteration: 134600, Loss: 0.3899495005607605
+Epoch: 10, Iteration: 134700, Loss: 0.08188215643167496
+Epoch: 10, Iteration: 134800, Loss: 0.2776950001716614
+Epoch: 10, Iteration: 134900, Loss: 0.12761257588863373
+Epoch: 10, Iteration: 135000, Loss: 0.46497055888175964
+Epoch: 10, Iteration: 135100, Loss: 0.5911524295806885
+Epoch: 10, Iteration: 135200, Loss: 0.22367139160633087
+Epoch: 10, Iteration: 135300, Loss: 0.1916930377483368
+Epoch: 10, Iteration: 135400, Loss: 0.3914868235588074
+Epoch: 10, Iteration: 135500, Loss: 0.33460792899131775
+Epoch: 10, Iteration: 135600, Loss: 0.3287277817726135
+Epoch: 10, Iteration: 135700, Loss: 0.5311517119407654
+Epoch: 10, Iteration: 135800, Loss: 0.4001077711582184
+Epoch: 10, Iteration: 135900, Loss: 0.6080966591835022
+Epoch: 10, Iteration: 136000, Loss: 0.23822058737277985
+Epoch: 10, Iteration: 136100, Loss: 0.21552784740924835
+Epoch: 10, Iteration: 136200, Loss: 0.09656129032373428
+Epoch: 10, Iteration: 136300, Loss: 0.47072285413742065
+Epoch: 10, Iteration: 136400, Loss: 0.2585497796535492
+Epoch: 10, Iteration: 136500, Loss: 0.3484550416469574
+Epoch: 10, Iteration: 136600, Loss: 0.5021436810493469
+Epoch: 10, Iteration: 136700, Loss: 0.46869736909866333
+Epoch: 10, Iteration: 136800, Loss: 0.5279595851898193
+Epoch: 10, Iteration: 136900, Loss: 0.3506132662296295
+Epoch: 10, Iteration: 137000, Loss: 0.14470526576042175
+Epoch: 10, Iteration: 137100, Loss: 0.6481614112854004
+Epoch: 10, Iteration: 137200, Loss: 0.5569854974746704
+Epoch: 10, Iteration: 137300, Loss: 0.2897447943687439
+Epoch: 10, Iteration: 137400, Loss: 0.4214772582054138
+Epoch: 10, Iteration: 137500, Loss: 0.28456762433052063
+Epoch: 10, Iteration: 137600, Loss: 0.3674349784851074
+Epoch: 10, Iteration: 137700, Loss: 0.25009554624557495
+Epoch: 10, Iteration: 137800, Loss: 0.15548500418663025
+Epoch: 10, Iteration: 137900, Loss: 0.16331788897514343
+Epoch: 10, Iteration: 138000, Loss: 0.41138917207717896
+Epoch: 10, Iteration: 138100, Loss: 0.22299976646900177
+Epoch: 10, Iteration: 138200, Loss: 0.2600029706954956
+Epoch: 10, Iteration: 138300, Loss: 0.477084755897522
+Epoch: 10, Iteration: 138400, Loss: 0.4687417149543762
+Epoch: 10, Iteration: 138500, Loss: 0.15335696935653687
+Epoch: 10, Iteration: 138600, Loss: 0.4094136953353882
+Epoch: 10, Iteration: 138700, Loss: 0.5894681811332703
+Epoch: 10, Iteration: 138800, Loss: 0.32837358117103577
+Epoch: 10, Iteration: 138900, Loss: 0.350242018699646
+Epoch: 10, Iteration: 139000, Loss: 0.5020992755889893
+Epoch: 10, Iteration: 139100, Loss: 0.08314015716314316
+Epoch: 10, Iteration: 139200, Loss: 0.3039499819278717
+Epoch: 10, Iteration: 139300, Loss: 0.29875344038009644
+Epoch: 10, Iteration: 139400, Loss: 0.39488938450813293
+Epoch: 10, Iteration: 139500, Loss: 0.4892268180847168
+Epoch: 10, Iteration: 139600, Loss: 0.41247767210006714
+Epoch: 10, Iteration: 139700, Loss: 0.3588542640209198
+Epoch: 10, Iteration: 139800, Loss: 0.15171201527118683
+Epoch: 10, Iteration: 139900, Loss: 0.5686284303665161
+Epoch: 10, Iteration: 140000, Loss: 0.3868745267391205
+Epoch: 10, Iteration: 140100, Loss: 0.573980450630188
+Epoch: 10, Iteration: 140200, Loss: 0.37434300780296326
+Epoch: 10, Iteration: 140300, Loss: 0.41431230306625366
+Epoch: 10, Iteration: 140400, Loss: 0.27996277809143066
+Epoch: 10, Iteration: 140500, Loss: 0.07862144708633423
+Epoch: 10, Iteration: 140600, Loss: 0.6217783093452454
+Epoch: 10, Iteration: 140700, Loss: 0.35182705521583557
+Epoch: 10, Iteration: 140800, Loss: 0.472660094499588
+Epoch: 10, Iteration: 140900, Loss: 0.3360520303249359
+Epoch: 10, Iteration: 141000, Loss: 0.27785724401474
+Epoch: 10, Iteration: 141100, Loss: 0.3590480089187622
+Epoch: 10, Iteration: 141200, Loss: 0.1506679505109787
+Epoch: 10, Iteration: 141300, Loss: 0.14065183699131012
+Epoch: 10, Iteration: 141400, Loss: 0.28196704387664795
+Epoch: 10, Iteration: 141500, Loss: 0.06502314656972885
+Epoch: 10, Iteration: 141600, Loss: 0.16418379545211792
+Epoch: 10, Iteration: 141700, Loss: 0.31818053126335144
+Epoch: 10, Iteration: 141800, Loss: 0.4203454256057739
+Epoch: 10, Iteration: 141900, Loss: 0.17147623002529144
+Epoch: 10, Iteration: 142000, Loss: 0.26140573620796204
+Epoch: 10, Iteration: 142100, Loss: 0.29887473583221436
+Epoch: 10, Iteration: 142200, Loss: 0.290248841047287
+Epoch: 10, Iteration: 142300, Loss: 0.33613666892051697
+Epoch: 10, Iteration: 142400, Loss: 0.24178387224674225
+Epoch: 10, Iteration: 142500, Loss: 0.2931491434574127
+Epoch: 10, Iteration: 142600, Loss: 0.18777857720851898
+Epoch: 10, Iteration: 142700, Loss: 0.6337825655937195
+Epoch: 10, Iteration: 142800, Loss: 0.5293051600456238
+Epoch: 10, Iteration: 142900, Loss: 0.3307306170463562
+Found 1 degenerate boxes. Keeping 7 boxes.
+tensor([[420.1040, 212.0015, 439.2400, 289.3159],
+        [255.9840, 209.4176, 263.2800, 227.9118],
+        [198.3360, 206.6901, 218.7440, 277.0901],
+        [235.4640, 209.1903, 248.0240, 246.5615],
+        [215.9920, 214.4179, 232.9360, 238.5465],
+        [169.8160, 206.7020, 182.5440, 252.3992],
+        [243.4880, 210.5301, 255.0800, 251.8490]], device='cuda:0')
+Epoch: 10, Iteration: 143000, Loss: 0.2533172369003296
+Epoch: 10, Iteration: 143100, Loss: 0.309065580368042
+Epoch: 10, Iteration: 143200, Loss: 0.2714437246322632
+Epoch: 10, Iteration: 143300, Loss: 0.3222516179084778
+Epoch: 10, Iteration: 143400, Loss: 0.3156219720840454
+Epoch: 10, Iteration: 143500, Loss: 0.2610040605068207
+Epoch: 10, Iteration: 143600, Loss: 0.3075687289237976
+Epoch: 10, Iteration: 143700, Loss: 0.5090362429618835
+Epoch: 10, Iteration: 143800, Loss: 0.43429604172706604
+Epoch: 10, Iteration: 143900, Loss: 0.4491389989852905
+Epoch: 10, Iteration: 144000, Loss: 0.316961407661438
+Epoch: 10, Iteration: 144100, Loss: 0.09828364104032516
+Epoch: 10, Iteration: 144200, Loss: 0.20920908451080322
+Epoch: 10, Iteration: 144300, Loss: 0.1879960000514984
+Epoch: 10, Iteration: 144400, Loss: 0.20284748077392578
+Epoch: 10, Iteration: 144500, Loss: 0.7114863991737366
+Epoch: 10, Iteration: 144600, Loss: 0.3309858739376068
+Epoch: 10, Iteration: 144700, Loss: 0.5990095734596252
+Epoch: 10, Iteration: 144800, Loss: 0.3839988708496094
+Epoch: 10, Iteration: 144900, Loss: 0.3249417841434479
+Epoch: 10, Iteration: 145000, Loss: 0.2401147037744522
+Epoch: 10, Iteration: 145100, Loss: 0.43875038623809814
+Epoch: 10, Iteration: 145200, Loss: 0.5098433494567871
+Epoch: 10, Iteration: 145300, Loss: 0.1880316287279129
+Epoch: 10, Iteration: 145400, Loss: 0.2595025897026062
+Epoch: 10, Iteration: 145500, Loss: 0.21166127920150757
+Epoch: 10, Iteration: 145600, Loss: 0.5795224905014038
+Epoch: 10, Iteration: 145700, Loss: 0.10922297835350037
+Epoch: 10, Iteration: 145800, Loss: 0.5589814186096191
+Epoch: 10, Iteration: 145900, Loss: 0.6011930704116821
+Epoch: 10, Iteration: 146000, Loss: 0.5254054665565491
+Epoch: 10, Iteration: 146100, Loss: 0.578189492225647
+Epoch: 10, Iteration: 146200, Loss: 0.5024470090866089
+Epoch: 10, Iteration: 146300, Loss: 0.1681758016347885
+Epoch: 10, Iteration: 146400, Loss: 0.8288150429725647
+Epoch: 10, Iteration: 146500, Loss: 0.3312702775001526
+Epoch: 10, Iteration: 146600, Loss: 0.31842949986457825
+
+ ----------------------------------------------------
+| Time profiling stats (in seconds):                 |
+ ----------------------------------------------------
+total  |  min/index  |  max/index  |  mean  |  std
+
+Processing function:
+64874.34375 | 0.26821/44003 | 135.03888/0 | 0.44228 | 0.36472
+
+Dataflow:
+301.93610 | 0.00009/128348 | 2.17579/117343 | 0.00206 | 0.01690
+
+Event handlers:
+7243.54395
+
+- Events.STARTED: ['run.<locals>.on_training_started']
+0.00167
+
+- Events.EPOCH_STARTED: ['run.<locals>.on_epoch_started']
+0.01609 | 0.00125/0 | 0.00197/8 | 0.00161 | 0.00019
+
+- Events.ITERATION_STARTED: []
+0.68214 | 0.00000/128181 | 0.04658/575 | 0.00000 | 0.00020
+
+- Events.ITERATION_COMPLETED: ['Engine._handler_wrapper.<locals>.wrapper', 'run.<locals>.on_iteration_completed']
+6045.04883 | 0.00021/7938 | 32.50097/1999 | 0.04121 | 0.61703
+
+- Events.EPOCH_COMPLETED: ['run.<locals>.log_intermediate_results', 'run.<locals>.on_epoch_completed']
+1196.14978 | 123.19122/2 | 149.93854/0 | 132.90553 | 10.45003
+
+- Events.COMPLETED: ['run.<locals>.on_training_completed']
+not yet triggered
+
+2024-04-26 19:53:31,394 - ignite.engine.engine.Engine - INFO - Engine run starting with max_epochs=1.
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Drawing debug image "validation/image_50_0"
+Drawing debug image "validation/image_50_1"
+Drawing debug image "validation/image_50_2"
+Drawing debug image "validation/image_50_3"
+Evaluation: Iteration: 100
+Drawing debug image "validation/image_100_0"
+Drawing debug image "validation/image_100_1"
+Drawing debug image "validation/image_100_2"
+Drawing debug image "validation/image_100_3"
+Drawing debug image "validation/image_150_0"
+Drawing debug image "validation/image_150_1"
+Drawing debug image "validation/image_150_2"
+Drawing debug image "validation/image_150_3"
+Evaluation: Iteration: 200
+Drawing debug image "validation/image_200_0"
+Drawing debug image "validation/image_200_1"
+Drawing debug image "validation/image_200_2"
+Drawing debug image "validation/image_200_3"
+Drawing debug image "validation/image_250_0"
+Drawing debug image "validation/image_250_1"
+Drawing debug image "validation/image_250_2"
+Drawing debug image "validation/image_250_3"
+Evaluation: Iteration: 300
+Drawing debug image "validation/image_300_0"
+Drawing debug image "validation/image_300_1"
+Drawing debug image "validation/image_300_2"
+Drawing debug image "validation/image_300_3"
+Drawing debug image "validation/image_350_0"
+Drawing debug image "validation/image_350_1"
+Drawing debug image "validation/image_350_2"
+Drawing debug image "validation/image_350_3"
+Evaluation: Iteration: 400
+Drawing debug image "validation/image_400_0"
+Drawing debug image "validation/image_400_1"
+Drawing debug image "validation/image_400_2"
+Drawing debug image "validation/image_400_3"
+Drawing debug image "validation/image_450_0"
+Drawing debug image "validation/image_450_1"
+Drawing debug image "validation/image_450_2"
+Drawing debug image "validation/image_450_3"
+Evaluation: Iteration: 500
+Drawing debug image "validation/image_500_0"
+Drawing debug image "validation/image_500_1"
+Drawing debug image "validation/image_500_2"
+Drawing debug image "validation/image_500_3"
+Accumulating evaluation results...
+DONE (t=0.60s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.375
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.665
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.368
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.173
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.450
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.596
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.154
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.406
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.482
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.288
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.553
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.695
+Accumulating evaluation results...
+DONE (t=0.61s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.375
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.665
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.368
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.173
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.450
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.596
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.154
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.406
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.482
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.288
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.553
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.695
+Accumulating evaluation results...
+DONE (t=0.53s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.375
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.665
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.368
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.173
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.450
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.596
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.154
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.406
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.482
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.288
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.553
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.695
+2024-04-26 19:55:35,078 - ignite.engine.engine.Engine - INFO - Epoch[1] Complete. Time taken: 00:02:02.636
+2024-04-26 19:55:35,079 - ignite.engine.engine.Engine - INFO - Engine run complete. Time taken: 00:02:03.685
+Saving model checkpoint
+Model checkpoint from epoch 10 was saved at ./gpu6/checkpoints/model_epoch_10.pth
+2024-04-26 19:55:36,509 - ignite.engine.engine.Engine - INFO - Epoch[10] Complete. Time taken: 01:56:24.182
+2024-04-26 19:55:36,587 - ignite.engine.engine.Engine - INFO - Engine run complete. Time taken: 20:10:53.909

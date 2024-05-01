@@ -1,0 +1,282 @@
+Opening hparams file from /nobackup/kolsur/Style-Transfer-for-Object-Detection-in-Art/checkpoints/hparams.pickle
+Updating hparams with {'warmup_iterations': 5000, 'training_batch_size': 4, 'test_size': 2000, 'epochs': 10, 'trainable_layers': 3, 'lr': 0.005, 'momentum': 0.9, 'weight_decay': 0.0005, 'train_set_size': 58672, 'step_size': 3, 'gamma': 0.1, 'early_stopping': False, 'patience': 3, 'total_iterations': 146680, 'total_epochs': 10, 'timeout': False, 'training_set_size': 58672, 'validation_set_size': 2000}
+Params: {'batch_size': 1, 'warmup_iterations': 5000, 'training_batch_size': 4, 'test_size': 2000, 'epochs': 10, 'trainable_layers': 3, 'lr': 0.005, 'momentum': 0.9, 'weight_decay': 0.0005, 'train_set_size': 58672, 'step_size': 3, 'gamma': 0.1, 'early_stopping': False, 'patience': 3, 'total_iterations': 146680, 'total_epochs': 10, 'timeout': False, 'training_set_size': 58672, 'validation_set_size': 2000}
+Loading validation image files from data/datasets/PeopleArt-Coco/test
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+creating index...
+index created!
+Testing with 2 classes...
+Loading FasterRCNN Model...
+iou_types: ['bbox']
+Loading model checkpoint from checkpoints/model_epoch_10.pth
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+Metric IOU Types: ['bbox']
+/u/k/o/kolsur/anaconda3/envs/art/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'backbone_name' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/u/k/o/kolsur/anaconda3/envs/art/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/u/k/o/kolsur/anaconda3/envs/art/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet152_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet152_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Evaluation: Iteration: 50
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Saving debug image...
+Saving debug image...
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Evaluation: Iteration: 100
+Saving debug image...
+Saving debug image...
+Saving debug image...
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Evaluation: Iteration: 150
+Saving debug image...
+Saving debug image...
+Saving debug image...
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Evaluation: Iteration: 200
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Saving debug image...
+Saving debug image...
+Evaluation: Iteration: 250
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Saving debug image...
+Evaluation: Iteration: 300
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Saving debug image...
+Evaluation: Iteration: 350
+Saving debug image...
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Evaluation: Iteration: 400
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Evaluation: Iteration: 450
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Warning. Empty batch. Returning empty images, targets lists.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+The model/target produced no bounding boxes and cannot be evaluated for this iteration.
+Saving debug image...
+Saving debug image...
+Accumulating evaluation results...
+DONE (t=0.07s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.322
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.641
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.280
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.058
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.196
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.396
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.205
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.410
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.461
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.194
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.350
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.531
+Accumulating evaluation results...
+DONE (t=0.07s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.322
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.641
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.280
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.058
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.196
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.396
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.205
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.410
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.461
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.194
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.350
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.531
+Accumulating evaluation results...
+DONE (t=0.07s).
+IoU metric: bbox
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.322
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.641
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.280
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.058
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.196
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.396
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.205
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.410
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.461
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.194
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.350
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.531
+Writing hparams: {'batch_size': 1, 'warmup_iterations': 5000, 'training_batch_size': 4, 'test_size': 2000, 'epochs': 10, 'trainable_layers': 3, 'lr': 0.005, 'momentum': 0.9, 'weight_decay': 0.0005, 'train_set_size': 58672, 'step_size': 3, 'gamma': 0.1, 'early_stopping': False, 'patience': 3, 'total_iterations': 146680, 'total_epochs': 10, 'timeout': False, 'training_set_size': 58672, 'validation_set_size': 2000}
