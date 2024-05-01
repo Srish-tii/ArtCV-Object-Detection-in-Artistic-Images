@@ -54,7 +54,7 @@ We built upon the work of Kadish et. al. (2021) by considering two alternative--
 
 WCT (Huang & Belongie, 2017) and AdaIN share a similar architecture (see diagram below). Both consist of a pre-trained VGG-19 encoder which maps the input content and style images into a high-dimensional feature space. Then, certain feature layers are linearly transformed and passed through the decoder which is learned in model training. The output of the decoder is the stylized content image.
 
-<img src="images/adain_wct_arch.png"
+<img src="adain_wct_arch.png"
      alt="AdaIN/WCT Architecture"
      style="width: 75%; height: auto"/>
 
@@ -66,7 +66,7 @@ The models differ in the linear transformation that is applied to feature layers
 
 The second model we experiment with is SANet (Park & Lee 2019).
 
-<img src="images/sanet_arch.png"
+<img src="sanet_arch.png"
      alt="SANet Architecture"
      style="width: 75%; height: auto"/>
 
