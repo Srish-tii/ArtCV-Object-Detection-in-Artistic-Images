@@ -27,7 +27,6 @@ torchmetrics # Evaluation
 
 vision_transformers
 
-=======
 Pillow
 torch
 torchvision

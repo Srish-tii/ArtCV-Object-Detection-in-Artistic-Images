@@ -1,0 +1,22 @@
+# Images and labels direcotry should be relative to train.py
+TRAIN_DIR_IMAGES: './data/datasets/style-coco/train2017'
+TRAIN_DIR_LABELS: './data/datasets/style-coco/train_xml'
+VALID_DIR_IMAGES: './data/datasets/style-coco/val2017'
+VALID_DIR_LABELS: './data/datasets/style-coco/val_xml'
+
+# Class names.
+CLASSES: [
+    '__background__',
+    'person'
+]
+
+COCO_91_CLASSES: [
+    '__background__', 
+    'person'
+]
+
+# Number of classes (object classes + 1 for background class in Faster RCNN).
+NC: 2
+
+# Whether to save the predictions of the validation set while training.
+SAVE_VALID_PREDICTION_IMAGES: True
