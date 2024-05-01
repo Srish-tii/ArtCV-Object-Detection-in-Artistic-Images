@@ -4,3 +4,6 @@ relative_links:
   enabled: true
   collections: true
 include:
+  - style_transfer_methods.md
+  - style_transfer_data.md
+  - style_transfer_demo.md
