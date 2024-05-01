@@ -1,4 +1,8 @@
-# ArtCV-Object-Detection-in-Artistic-Images
+# ArtCV-Object Detection in Artistic Images
+### Project by
+## Aditya Kolsur, Andrew Gross, Srishti Lodha, Tara Bobinac
+
+Link to the repository: `https://github.com/Srish-tii/ArtCV-Object-Detection-in-Artistic-Images`
 
 ## Steps to build StyleCOCO
 
