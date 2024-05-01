@@ -9,7 +9,7 @@ We could fine-tune a neural network, but there are not enough datasets of labele
 Since the development of the dataset in (Kadish et al., 2021), it was found that style transfer models suffer from what (An et al., 2021) term as “content leak”. Through repeated rounds of styling an input image based on a reference image, the content from the reference image begins to appear in the stylized input image. Modern style transfer models attempt to solve the issue of content leak. 
 Finally, we also generate alternative training sets with improved style transfer models, Whitening and Color Transforms (WCT) and SANet, and compare results of people detection with baseline AdaIN.
 
-# Style transfer data
+## Style transfer data
 
 For content images we pull from the COCO 2017 dataset (**INSERT CITATION**) which consists of labeled photographs of various objects and people. We use the API to filter only on photos that contain people, which leaves us with ~64k images to create a training set and ~3k images to create a validation set for our downstream classification.
 
@@ -17,7 +17,7 @@ For style images we pull from the Painter-by-Numbers dataset (**INSERT CITATION*
 
 For inference, we pair each content image with a random style image. These pairs are consistent across models in order to accurately compare the results of people detection.
 
-# Style transfer demo
+## Style transfer demo
 
 A few examples are included in the GitHub repository to facilitate running style transfer with all 3 models to generate the training examples for people detection.
 
