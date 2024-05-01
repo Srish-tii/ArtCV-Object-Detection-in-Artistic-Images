@@ -9,6 +9,10 @@ We could fine-tune a neural network, but there are not enough datasets of labele
 Since the development of the dataset in (Kadish et al., 2021), it was found that style transfer models suffer from what (An et al., 2021) term as “content leak”. Through repeated rounds of styling an input image based on a reference image, the content from the reference image begins to appear in the stylized input image. Modern style transfer models attempt to solve the issue of content leak. 
 Finally, we also generate alternative training sets with improved style transfer models, Whitening and Color Transforms (WCT) and SANet, and compare results of people detection with baseline AdaIN.
 
+[a link](https://github.com/Srish-tii/ArtCV-Object-Detection-in-Artistic-Images/blob/main/style_transfer_data.md)
+[a link](https://github.com/Srish-tii/ArtCV-Object-Detection-in-Artistic-Images/blob/main/style_transfer_demo.md)
+[a link](https://github.com/Srish-tii/ArtCV-Object-Detection-in-Artistic-Images/blob/main/style_transfer_methods.md)
+
 ## to edit from here - 
 
 ## Steps to build StyleCOCO
