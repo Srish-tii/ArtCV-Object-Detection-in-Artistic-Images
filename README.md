@@ -9,7 +9,7 @@ We could fine-tune a neural network, but there are not enough datasets of labele
 Since the development of the dataset in (Kadish et al., 2021), it was found that style transfer models suffer from what (An et al., 2021) term as “content leak”. Through repeated rounds of styling an input image based on a reference image, the content from the reference image begins to appear in the stylized input image. Modern style transfer models attempt to solve the issue of content leak. 
 Finally, we also generate alternative training sets with improved style transfer models, Whitening and Color Transforms (WCT) and SANet, and compare results of people detection with baseline AdaIN.
 
-## Style transfer data
+## Style Transfer Data
 
 For content images we pull from the COCO 2017 dataset (Lin et. al. 2014) which consists of labeled photographs of various objects and people. We use the API to filter only on photos that contain people, which leaves us with ~64k images to create a training set and ~3k images to create a validation set for our downstream classification.
 
@@ -17,13 +17,13 @@ For style images we pull from the Painter-by-Numbers dataset (Saleh & Elgammal 2
 
 For inference, we pair each content image with a random style image. These pairs are consistent across models in order to accurately compare the results of people detection.
 
-## Style transfer demo
+## Style Transfer Demo
 
-A few examples are included in the GitHub repository to facilitate running style transfer with all 3 models to generate the training examples for people detection.
+A few examples are included in the GitHub repository (demos folder) to facilitate running style transfer with all 3 models to generate the training examples for people detection.
 
 **Preliminaries**
 
-First make sure to `pip install -r requirements.txt`. Next, install the pre-trained weights for the various models [here](https://drive.google.com/drive/folders/1QVw2h3XUGjWaLZkFttwSCEjWR_EbtKZ9?usp=drive_link).
+First make sure to `pip install -r requirements.txt`. Next, download the pre-trained weights for the various models [here](https://drive.google.com/drive/folders/1QVw2h3XUGjWaLZkFttwSCEjWR_EbtKZ9?usp=drive_link).
 
 1. Within each `ArtFlow-X` folder is a `glow.pth`. Place each in the corresponding folder located in `ArtCV-Object-Detection-in-Artistic-Images/models/stylize/ArtFlow/experiments`.
 2. Move the _contents_ of the `SANet` folder into `ArtCV-Object-Detection-in-Artistic-Images/models/stylize/SANet` (do not move entire folder).
@@ -46,11 +46,11 @@ Starting from the parent directory of the repository, `cd` to `models/stylize/SA
 
 `python3 inference.py --content_dir ../../../data/examples/content --style_dir ../../../data/examples/style --vgg vgg_normalised.pth --output ../../../output/styled_images/examples/SANet --start_iter 500000 --size 0 &`
 
-## Style transfer methodology
+## Style Transfer Methodology
 
 We built upon the work of Kadish et. al. (2021) by considering two alternative--and potentially improved--style transfer techniques to Adaptive Instance Normalization (AdaIN): Whitening and Coloring Transforms and Style-Attention Network. Using these two models, we will generate competing synthetic training sets for person detection and compare their accuracy relative to the baseline model trained with AdaIN-generated stylized photos.
 
-### Whitening and color transforms (WCT)
+### Whitening and Color Transforms (WCT)
 
 WCT (Huang & Belongie, 2017) and AdaIN share a similar architecture (see diagram below). Both consist of a pre-trained VGG-19 encoder which maps the input content and style images into a high-dimensional feature space. Then, certain feature layers are linearly transformed and passed through the decoder which is learned in model training. The output of the decoder is the stylized content image.
 
@@ -62,7 +62,7 @@ Before contrasting the models, a quick note on the taxonomy of the feature space
 
 The models differ in the linear transformation that is applied to feature layers after encoding. For a given feature layer, AdaIN matches the channel-wise mean and variance of the content and style images by shifting and scaling the feature layer of the content image accordingly. WCT intends to perform a similar but improved operation. Instead of considering just channel-wise relationships, WCT incorporates inter-channel relationships by applying a two-fold linear transformation. First, a whitening transformation is applied to the content image's feature layer to attempt to strip the image of its stylistic properties. Next, a coloring transformation (which is a function of the style image's feature layer) is applied to the whitened content image feature layer to attempt to apply the styistic properties of the style image to the content image. Note that $f_{c}$ is a matrix of channels of the feature layer of the content image $c$ (i.e., $f_{c} \in \mathbb{R}^{C \times (h*w)}$, where $C$ is the number of channels and $h$ and $w$ are the height and width of the content image, respectively). Also note that the transformation matrix is (roughly) the eigendecomposition of $f_{c}f_{c}^{T}$, which when normalized is the covariance matrix of $f_{c}$. This further explains the notion that WCT is accounting for cross-channel relationships.
 
-### Style-attention network (SANet)
+### Style-Attention Network (SANet)
 
 The second model we experiment with is SANet (Park & Lee 2019).
 
@@ -79,8 +79,66 @@ $F^{i}\_{cs} = \frac{1}{C(F)}\sum_{\forall j}\text{exp}\left(f(\bar{F^{i}\_{c}})
 where $F^{i}\_{cs}$ is the $i^{th}$ feature layer of the stylized content image, $\{f(\centerdot), g(\centerdot), h(\centerdot)\}$ are linear transformations whose matrix weights are learned, $\{c,s\}$ represent the content and style images (respectively), $C(F) =  \sum_{\forall j}\text{exp}\left(f(\bar{F^{i}\_{c}})^{T}g(\bar{F^{j}\_{s}})\right)$ and $\bar{F^{i,j}\_{c,s}}$ is the mean-variance channel-wise normalized version of $F^{i,j}\_{c,s}$. In essence this expression represents the weighted sum of the feature layer of the style image where the weights are determined by the similarity between the $i^{th}$ and $j^{th}$ feature layer of content and style images, respectively. This is then mapped to a matrix of values between 0 and 1 by wrapping it in the softmax function.
 
 
-## to edit from here - 
+## Object Detection Methodology
 
+After generating the various art stylized images using various techniques, the next step was to train an object detection model on them and evaluate the model on the PeopleArt dataset. 
+The object detection model employed by us is Faster-RCNN (Region-based Convolutional Neural Network). FasterRCNN model with a ResNet-152 backbone pre-trained on ImageNet was fine-tuned on the generated datasets using a random subset of 2,000 images as the validation dataset. The model was optimized using stochastic gradient descent (SGD), using an initial learning rate of 0.005, a momentum of 0.9, and weight decay of 0.0005 for 10 epochs. 
+
+## Faster - Region-based Convolutional Neural Networks
+
+Faster RCNN (Ren et al. 2016) introduced Region Proposal Networks (RPNs), where it efficiently generates region proposals and classifies objects within them. Its two-stage architecture optimizes both speed and detection performance, making it a cornerstone in computer vision applications.
+
+The Faster R-CNN model takes the following approach: The Image first passes through the backbone network to get an output feature map, and the ground truth bounding boxes of the image get projected onto the feature map. The backbone network is usually a dense convolutional network like ResNet or VGG16. The output feature map is a spatially dense Tensor that represents the learned features of the image. Next, we treat each point on this feature map as an anchor. For each anchor, we generate multiple boxes of different sizes and shapes. The purpose of these anchor boxes is to capture objects in the image.
+
+<img src="site-images/faster-rcnn.png"
+     alt="Faster-RCNN Overview"
+     style="width: 75%; height: auto"/>
+
+## Object Detection Demo
+
+**Preliminaries**
+
+First make sure to `pip install -r requirements.txt`. Next, download the pre-trained weights for the various models [here](https://drive.google.com/drive/folders/1QVw2h3XUGjWaLZkFttwSCEjWR_EbtKZ9?usp=drive_link).
+Download the PeopleArt dataset and its annotations from [here](https://www.kaggle.com/datasets/davidkadish/style-transfer-for-object-detection-in-art). Additionally, download the StyleCOCO annotations for people from the same link. 
+Move all datasets to `data/datasets/` and run the script `python rename_images.py` after changing the source and destination folder names as required. 
+
+**Training Faster-RCNN**
+To train the model use the following command:
+
+`python -m artdetect.train --train_dataset_ann_file data/datasets/style-coco/annotations/person_train2017.json --val_dataset_ann_file data/datasets/style-coco/annotations/person_val2017.json --backbone_name resnet152 --batch_size 4`
+
+For different datasets, use the appropriate paths for the training and validation annotation files. Training the entire model takes a lot of time, suggest to use the provided pre-trained model weights and move to evaluation. 
+
+To check the training progression, you can look at the attached log files for various training jobs for the different datasets in the `logs` folder. 
+
+**Evaluation on PeopleArt**
+To evaluate the model on the PeopleArt dataset, use the following command:
+
+`python -m artdetect.evaluate --val_dataset_ann_file data/datasets/PeopleArt-Coco/annotations/peopleart_test.json --input_checkpoint checkpoints/model_epoch_10.pth  --log_dir results/eval/ --backbone_name resnet152`
+
+To try different model weights simply change the path to the `input_checkpoint` parameter. Some example outputs have been attached in the demos folder. 
+To check the evaluation progression, you can look at the attached log files for various model evaluations for the PeopleArt dataset in the `logs` folder.
+
+## Qualitative Results
+
+<img src="site-images/qual-results.png"
+     alt="Qualitative Results"
+     style="width: 100%; height: auto"/>
+
+## Quantitative Results
+We evaluate the performance of each model based on COCO’s definition of average precision (AP), which is the average of the precision scores across 10 intersection-over-union ratios defined across threshold values from 0.50 through 0.95 in 0.05 increments. The AP50 score reflects object detections that are less exact than the AP75 score.
+
+<img src="site-images/baseline results.png"
+     alt="Qualitative Results"
+     style="width: 75%; height: auto"/>
+
+<img src="site-images/artwct results.png"
+     alt="Qualitative Results"
+     style="width: 75%; height: auto"/>
+
+<img src="site-images/sanet results.png"
+     alt="Qualitative Results"
+     style="width: 75%; height: auto"/>
 
 ## References
 
@@ -95,3 +153,5 @@ Park, D. Y., & Lee, K. H. (2019). Arbitrary style transfer with style-attentiona
 Saleh, B., & Elgammal, A. (2015). Large-scale classification of fine-art paintings: Learning the right metric on the right feature. arXiv preprint arXiv:1505.00855.
 
 Tsung-Yi Lin, Maire, M., Belongie, S. J., Bourdev, L. D., Girshick, R. B., Hays, J., … Zitnick, C. L. (2014). Microsoft COCO: Common Objects in Context. CoRR, abs/1405.0312. Retrieved from http://arxiv.org/abs/1405.0312
+
+Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun. Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks. NeurIPS, 2016
