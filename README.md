@@ -11,9 +11,9 @@ Finally, we also generate alternative training sets with improved style transfer
 
 ## Style transfer data
 
-For content images we pull from the COCO 2017 dataset (**INSERT CITATION**) which consists of labeled photographs of various objects and people. We use the API to filter only on photos that contain people, which leaves us with ~64k images to create a training set and ~3k images to create a validation set for our downstream classification.
+For content images we pull from the COCO 2017 dataset (Lin et. al. 2014) which consists of labeled photographs of various objects and people. We use the API to filter only on photos that contain people, which leaves us with ~64k images to create a training set and ~3k images to create a validation set for our downstream classification.
 
-For style images we pull from the Painter-by-Numbers dataset (**INSERT CITATION**), which consists of ~72k scans of actual paintings spanning dozens of artistic movements. 
+For style images we pull from the Painter-by-Numbers dataset (Saleh & Elgammal 2015), which consists of ~72k scans of actual paintings spanning dozens of artistic movements. 
 
 For inference, we pair each content image with a random style image. These pairs are consistent across models in order to accurately compare the results of people detection.
 
@@ -81,20 +81,17 @@ where $F^{i}\_{cs}$ is the $i^{th}$ feature layer of the stylized content image,
 
 ## to edit from here - 
 
-## Steps to build StyleCOCO
 
-StyleCOCO is generated from two image sets. `COCO 2017` contains the content images and `Painter By Numbers` contains the style images.
+## References
 
-**COCO 2017**: On the linux server, `wget http://images.cocodataset.org/zips/train2017.zip` and unzip into `content_dir`
+An, J., Huang, S., Song, Y., Dou, D., Liu, W., & Luo, J. (2021). Artflow: Unbiased image style transfer via reversible neural flows. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 862-871).
 
-**Painter By Numbers**: This requires the Kaggle API. 
+Huang, X., & Belongie, S. (2017). Arbitrary style transfer in real-time with adaptive instance normalization. In Proceedings of the IEEE international conference on computer vision (pp. 1501-1510).
 
-- Create a Kaggle account. 
-- Go to `https://www.kaggle.com/settings`
-- Go to API section, click `Create New Token`. Follow instructions provided to place JSON file in appropriate location on linux server
-- Join Painter By Numbers competition: `https://www.kaggle.com/c/painter-by-numbers/`
-- Run `kaggle competitions download -c painter-by-numbers -f train.zip -p /path/to/style_dir`
+Kadish, D., Risi, S., & Løvlie, A. S. (2021, July). Improving object detection in art images using only style transfer. In 2021 international joint conference on neural networks (IJCNN) (pp. 1-8). IEEE.
 
+Park, D. Y., & Lee, K. H. (2019). Arbitrary style transfer with style-attentional networks. In proceedings of the IEEE/CVF conference on computer vision and pattern recognition (pp. 5880-5888).
 
-**Create StyleCOCO**: From the root project folder, `cd models/stylize` and run `nohup python3 stylize.py --content-dir '../../data/content_dir/' --style-dir '../../data/style_dir/' --output-dir '../../output/styled_images' --num-styles 1 --alpha 1 --content-size 0 --style-size 0 --crop 0 &`
+Saleh, B., & Elgammal, A. (2015). Large-scale classification of fine-art paintings: Learning the right metric on the right feature. arXiv preprint arXiv:1505.00855.
 
+Tsung-Yi Lin, Maire, M., Belongie, S. J., Bourdev, L. D., Girshick, R. B., Hays, J., … Zitnick, C. L. (2014). Microsoft COCO: Common Objects in Context. CoRR, abs/1405.0312. Retrieved from http://arxiv.org/abs/1405.0312
