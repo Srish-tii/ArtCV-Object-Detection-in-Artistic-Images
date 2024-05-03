@@ -54,7 +54,7 @@ We built upon the work of Kadish et. al. (2021) by considering two alternative--
 
 WCT (Huang & Belongie, 2017) and AdaIN share a similar architecture (see diagram below). Both consist of a pre-trained VGG-19 encoder which maps the input content and style images into a high-dimensional feature space. Then, certain feature layers are linearly transformed and passed through the decoder which is learned in model training. The output of the decoder is the stylized content image.
 
-<img src="adain_wct_arch.png"
+<img src="site-images/adain_wct_arch.png"
      alt="AdaIN/WCT Architecture"
      style="width: 75%; height: auto"/>
 
@@ -66,9 +66,9 @@ The models differ in the linear transformation that is applied to feature layers
 
 The second model we experiment with is SANet (Park & Lee 2019).
 
-<img src="sanet_arch.png"
+<img src="site-images/sanet_arch.png"
      alt="SANet Architecture"
-     style="width: 75%; height: auto"/>
+     style="width: 100%; height: auto"/>
 
 The model broadly shares the same structure as AdaIN and WCT (see diagram above). The content and style images are mapped to the feature space with a pre-trained VGG-19 encoder. Select feature layers are transformed, upsampled and concatenated to then be sent through a learned decoder, which takes the input and produces the stylized content image.
 
@@ -84,7 +84,7 @@ where $F^{i}\_{cs}$ is the $i^{th}$ feature layer of the stylized content image,
 After generating the various art stylized images using various techniques, the next step was to train an object detection model on them and evaluate the model on the PeopleArt dataset. 
 The object detection model employed by us is Faster-RCNN (Region-based Convolutional Neural Network). FasterRCNN model with a ResNet-152 backbone pre-trained on ImageNet was fine-tuned on the generated datasets using a random subset of 2,000 images as the validation dataset. The model was optimized using stochastic gradient descent (SGD), using an initial learning rate of 0.005, a momentum of 0.9, and weight decay of 0.0005 for 10 epochs. 
 
-## Faster - Region-based Convolutional Neural Networks
+### Faster - Region-based Convolutional Neural Networks
 
 Faster RCNN (Ren et al. 2016) introduced Region Proposal Networks (RPNs), where it efficiently generates region proposals and classifies objects within them. Its two-stage architecture optimizes both speed and detection performance, making it a cornerstone in computer vision applications.
 
@@ -103,6 +103,7 @@ Download the PeopleArt dataset and its annotations from [here](https://www.kaggl
 Move all datasets to `data/datasets/` and run the script `python rename_images.py` after changing the source and destination folder names as required. 
 
 **Training Faster-RCNN**
+
 To train the model use the following command:
 
 `python -m artdetect.train --train_dataset_ann_file data/datasets/style-coco/annotations/person_train2017.json --val_dataset_ann_file data/datasets/style-coco/annotations/person_val2017.json --backbone_name resnet152 --batch_size 4`
@@ -112,6 +113,7 @@ For different datasets, use the appropriate paths for the training and validatio
 To check the training progression, you can look at the attached log files for various training jobs for the different datasets in the `logs` folder. 
 
 **Evaluation on PeopleArt**
+
 To evaluate the model on the PeopleArt dataset, use the following command:
 
 `python -m artdetect.evaluate --val_dataset_ann_file data/datasets/PeopleArt-Coco/annotations/peopleart_test.json --input_checkpoint checkpoints/model_epoch_10.pth  --log_dir results/eval/ --backbone_name resnet152`
@@ -128,17 +130,37 @@ To check the evaluation progression, you can look at the attached log files for 
 ## Quantitative Results
 We evaluate the performance of each model based on COCO’s definition of average precision (AP), which is the average of the precision scores across 10 intersection-over-union ratios defined across threshold values from 0.50 through 0.95 in 0.05 increments. The AP50 score reflects object detections that are less exact than the AP75 score.
 
+**Baseline AdaIN Results**
+
 <img src="site-images/baseline results.png"
      alt="Qualitative Results"
-     style="width: 75%; height: auto"/>
+     style="width: 100%; height: auto"/>
+
+**Whitening and Color Transforms (WCT) Results**
 
 <img src="site-images/artwct results.png"
      alt="Qualitative Results"
-     style="width: 75%; height: auto"/>
+     style="width: 100%; height: auto"/>
+
+**Style-Attention Network (SANet) Results**
 
 <img src="site-images/sanet results.png"
      alt="Qualitative Results"
-     style="width: 75%; height: auto"/>
+     style="width: 100%; height: auto"/>
+
+## Conclusion
+
+**Results Summary**
+
+1. WCT style transfer trained models performs the best on art images
+
+2. Content leak in SANet reduces its accuracy matching it to the baseline
+
+**Future Directions**
+
+1. Reducing/Eliminating content leak from SANet could match or improve upon WCT
+
+2. DEtection TRansfomers (DETR) could be an interesting avenue for object detection
 
 ## References
 
