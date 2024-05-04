@@ -152,19 +152,7 @@ We evaluate the performance of each model based on COCO’s definition of averag
      alt="Qualitative Results"
      style="width: 100%; height: auto"/>
 
-## Conclusion
-
-**Results Summary**
-
-1. WCT style transfer trained models performs the best on art images
-
-2. Content leak in SANet reduces its accuracy matching it to the baseline
-
-**Future Directions**
-
-1. Reducing/Eliminating content leak from SANet could match or improve upon WCT
-
-2. DEtection TRansfomers (DETR) could be an interesting avenue for object detection
+In conclusion, the evaluation of various style transfer models reveals that WCT-trained models exhibit superior performance when applied to art images. However, the presence of content leak in SANet undermines its accuracy, positioning it below the baseline. To address this limitation, future research could focus on mitigating or eliminating content leak in SANet, potentially allowing it to match or surpass the effectiveness of WCT. Additionally, exploring the application of Detection Transformers (DETR) for object detection presents an intriguing avenue for further investigation and development in the field.
 
 ## References
 
